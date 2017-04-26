@@ -1,0 +1,42 @@
+/**
+ * Стили для массового блокировщика, а также скрытых полей
+ * @author Alex Kovalev <alex.kovalevv@gmail.com>
+ * @copyright Alex Kovalev 23.04.2017
+ * @version 1.0
+ */
+
+/** Для режима попап */
+#OPanda_BulkLockingMetaBox .onp-sl-fullscreen-lock-state .onp-sl-fullscreen-lock-content {
+    display: block;
+}
+
+#OPanda_BulkLockingMetaBox .onp-sl-select-post-ids-rule {
+    display: none;
+}
+
+#OPanda_BulkLockingMetaBox .onp-sl-select-post-ids-rule-state .onp-sl-rules,
+#OPanda_BulkLockingMetaBox .onp-sl-select-post-ids-rule-state .onp-sl-select-post-ids-rule {
+    display: block;
+}
+
+#onp-sl-bulk-lock-modal .modal-dialog,
+#onp-sl-bulk-lock-modal .modal-body {
+    width: 720px;
+}
+
+/** Для темы Input Popup*/
+#OPanda_BasicOptionsMetaBox .factory-control-input_popup_text_link,
+#OPanda_AdvancedOptionsMetaBox .factory-control-input_popup_available_link {
+    display: none;
+}
+
+#OPanda_AdvancedOptionsMetaBox .factory-control-input_popup_available_link {
+    border-bottom: 1px solid #f7f7f7;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+#OPanda_AdvancedOptionsMetaBox .factory-control-close {
+    border-top: 0 !important;
+    margin-top: 0 !important;
+}

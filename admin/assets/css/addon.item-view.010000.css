@@ -1,0 +1,16 @@
+/**
+ * Стили для страницы со списком замков. Относятся к правилам массовой блокировки.
+ * @author Alex Kovalev <alex.kovalevv@gmail.com>
+ * @copyright Alex Kovalev 23.04.2017
+ * @version 1.0
+ */
+
+.column-bulk .onp-sl-fullscreen-lock-state .onp-sl-fullscreen-lock-content,
+.column-bulk .onp-sl-select-post-ids-rule-state .onp-sl-rules,
+.column-bulk .onp-sl-select-post-ids-rule-state .onp-sl-select-post-ids-rule {
+    display: block;
+}
+
+.column-bulk .onp-sl-select-post-ids-rule {
+    display: none;
+}
