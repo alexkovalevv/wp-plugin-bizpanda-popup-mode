@@ -5,6 +5,22 @@
  * @version 1.0
  */
 
+#Opanda_SettingModsMetabox {
+    display: block;
+    background: #f6f6f6;
+}
+
+#Opanda_SettingModsMetabox .factory-control-lock_mode .factory-hints .factory-hint,
+#Opanda_SettingModsMetabox .factory-control-way_lock .factory-hints .factory-hint {
+    background-color: #eceaea;
+    padding: 10px;
+}
+
+#Opanda_SettingModsMetabox #opanda_open_locker_link_selector,
+#Opanda_SettingModsMetabox .factory-control-open_locker_link_selector .help-block {
+    max-width: 450px;
+}
+
 /** Для режима попап */
 #OPanda_BulkLockingMetaBox .onp-sl-fullscreen-lock-state .onp-sl-fullscreen-lock-content {
     display: block;
