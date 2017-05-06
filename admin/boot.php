@@ -31,12 +31,12 @@
 		?>
 		<style>
 			i.onp-bzda-adn-events-shortcode-icon {
-				background: url("<?php echo BZDA_ADN_PLUGIN_URL . '/admin/assets/img/bizpanda-evalution-events-shortcode-icon.png' ?>");
+				background: url("<?php echo BZDA_ADN_PLUGIN_URL . '/admin/assets/img/bizpanda-evolution-events-shortcode-icon.png' ?>");
 			}
 		</style>
 		<script>
-			var bizpanda_evalution_shortcode_title = '<?php echo __('Выделите ссылку, кнопку или картинку, чтобы присвоить им действие, которое вызовет замок.', 'plugin-addon-popup-locker') ?>';
-			var bizpanda_evalution_not_found_text = '<?php echo __('-- Еще нет замков с выбранным режимом --', 'plugin-addon-popup-locker'); ?>';
+			var bizpanda_evolution_shortcode_title = '<?php echo __('Выделите ссылку, кнопку или картинку, чтобы присвоить им действие, которое вызовет замок.', 'plugin-addon-popup-locker') ?>';
+			var bizpanda_evolution_not_found_text = '<?php echo __('-- Еще нет замков с выбранным режимом --', 'plugin-addon-popup-locker'); ?>';
 		</script>
 	<?php
 	}
@@ -51,7 +51,7 @@
 		if( !current_user_can('edit_' . OPANDA_POST_TYPE) ) {
 			return $buttons;
 		}
-		array_push($buttons, "bizpanda_evalution_addon");
+		array_push($buttons, "bizpanda_evolution_addon");
 
 		return $buttons;
 	}
@@ -67,7 +67,7 @@
 			return $plugin_array;
 		}
 
-		$plugin_array['bizpanda_evalution_addon'] = BZDA_ADN_PLUGIN_URL . '/admin/assets/js/addon.tinymce4.4.js';
+		$plugin_array['bizpanda_evolution_addon'] = BZDA_ADN_PLUGIN_URL . '/admin/assets/js/addon.tinymce4.4.js';
 
 		return $plugin_array;
 	}
@@ -96,7 +96,7 @@
 	function onp_bzda_adn_metaboxes($metaboxes)
 	{
 		array_unshift($metaboxes, array(
-			'class' => 'Opanda_SettingModsMetabox',
+			'class' => 'BZDA_EVO_SettingModsMetabox',
 			'path' => BZDA_ADN_PLUGIN_DIR . '/admin/metaboxes/setting-mods.php'
 		));
 
@@ -111,8 +111,8 @@
 	function onp_bzda_adn_print_scripts_to_preview_head()
 	{
 		?>
-		<script type="text/javascript" src="<?php echo BZDA_ADN_PLUGIN_URL ?>/assets/js/popup-mode.js"></script>
-		<link rel="stylesheet" type="text/css" href="<?php echo BZDA_ADN_PLUGIN_URL ?>/assets/css/popup-mode.min.css">
+		<script type="text/javascript" src="<?php echo BZDA_ADN_PLUGIN_URL ?>/plugin/assets/js/popup-mode.js"></script>
+		<link rel="stylesheet" type="text/css" href="<?php echo BZDA_ADN_PLUGIN_URL ?>/plugin/assets/css/popup-mode.min.css">
 	<?php
 	}
 

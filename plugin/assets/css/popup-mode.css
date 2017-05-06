@@ -9,8 +9,8 @@
  * @!lang:[]
  * @!build:['popup_mode']
  */
-.onp-sl-overlap-box.onp-sl-darkness-theme.onp-sl-blurring-mode {
-  opacity: 0.4;
+.onp-sl-overlap-box.onp-sl-darkness-theme.onp-sl-blurring-mode .onp-sl-overlap-background {
+  opacity: 0.6;
 }
 .onp-sl-overlap-box.onp-sl-darkness-theme .onp-sl-overlap-background {
   background: rgba(0, 0, 0, 0.9) url('../img/lock-content-img.png') repeat;
@@ -252,11 +252,10 @@
 .onp-sl.onp-sl-darkness .onp-sl-social-buttons .onp-sl-mail .onp-sl-overlay-header {
   background-color: #0E406C;
 }
-.onp-sl.onp-sl-darkness .onp-sl-subscription .onp-sl-form-button {
-  background-color: #FFC107;
+.onp-sl.onp-sl-darkness .onp-sl-subscription .onp-sl-button-primary {
   color: #694f01;
 }
-.onp-sl.onp-sl-darkness .onp-sl-subscription .onp-sl-form-button.load:before {
+.onp-sl.onp-sl-darkness .onp-sl-subscription .onp-sl-button-primary.load:before {
   background: url('../img/button-loader-ffc107.gif');
 }
 .onp-sl.onp-sl-darkness .onp-sl-subscription .onp-sl-input {
@@ -309,6 +308,11 @@
 }
 .onp-sl.onp-sl-darkness .onp-sl-screen {
   font-family: Segoe UI, Helvetica Neue, Helvetica, Arial, sans-serif;
+  padding: 15px;
+}
+.onp-sl.onp-sl-darkness .onp-sl-screen .onp-sl-button-primary {
+  background-color: #FFC107;
+  color: #222;
 }
 .onp-sl.onp-sl-darkness .onp-sl-screen.onp-sl-screen-data-processing .onp-sl-process-spin {
   height: 150px;
@@ -329,8 +333,8 @@
  * @!lang:[]
  * @!build:['popup_mode']
  */
-.onp-sl-overlap-box.onp-sl-download-theme.onp-sl-blurring-mode {
-  opacity: 0.4;
+.onp-sl-overlap-box.onp-sl-download-theme.onp-sl-blurring-mode .onp-sl-overlap-background {
+  opacity: 0.6;
 }
 .onp-sl-overlap-box.onp-sl-download-theme .onp-sl-overlap-background {
   background: rgba(2, 95, 107, 0.78) url('../img/lock-content-img.png') repeat;
@@ -678,8 +682,8 @@
  * @!lang:[]
  * @!build:['popup_mode']
  */
-.onp-sl-overlap-box.onp-sl-glasscase-theme.onp-sl-blurring-mode {
-  opacity: 0.4;
+.onp-sl-overlap-box.onp-sl-glasscase-theme.onp-sl-blurring-mode .onp-sl-overlap-background {
+  opacity: 0.6;
 }
 .onp-sl-overlap-box.onp-sl-glasscase-theme .onp-sl-overlap-background {
   background: rgba(97, 97, 97, 0.78) url('../img/lock-content-img.png') repeat;

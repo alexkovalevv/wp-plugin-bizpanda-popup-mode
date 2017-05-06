@@ -11,7 +11,7 @@
 	 *
 	 * @since 1.0.0
 	 */
-	class Opanda_SettingModsMetabox extends FactoryMetaboxes000_FormMetabox {
+	class BZDA_EVO_SettingModsMetabox extends FactoryMetaboxes000_FormMetabox {
 
 		/**
 		 * A visible title of the metabox.
@@ -139,23 +139,23 @@
 				'data' => array(
 					array(
 						'visible',
-						'<i class="fa fa-eye" aria-hidden="true"></i>' . __('При просмотре', 'bizpanda')
+						'<i class="fa fa-eye" aria-hidden="true"></i>' . __('Просмотр', 'bizpanda')
 					),
 					array(
 						'adblock',
-						'<i class="fa fa-ban" aria-hidden="true"></i>' . __('При использовании "блокировщиков"', 'bizpanda')
+						'<i class="fa fa-ban" aria-hidden="true"></i>' . __("Блокировщик рекламы", 'bizpanda')
 					),
 					array(
 						'click',
-						'<i class="fa fa-bullseye"></i>' . __('При нажатии', 'bizpanda')
+						'<i class="fa fa-bullseye"></i>' . __('Нажатие', 'bizpanda')
 					),
 					array(
 						'hover',
-						'<i class="fa fa-mouse-pointer" aria-hidden="true"></i>' . __('При наведении', 'bizpanda')
+						'<i class="fa fa-mouse-pointer" aria-hidden="true"></i>' . __('Наведение', 'bizpanda')
 					)
 				),
-				'title' => __('Как показывать замок?', 'bizpanda'),
-				'hint' => __('Вы можете установить событие, например "нажатие на кнопку", чтобы показать замок на странице. Также замок может быть вызван, если у пользователя включен блокировщик рекламы.', 'bizpanda'),
+				'title' => __('Выберите событие, когда должен появится замок', 'bizpanda'),
+				'hint' => __('Выбрав событие, например "нажатие", замок появится на странице, только после нажатие на установленный вами объект (кнопку, ссылку и прочее). Также замок может быть вызван, если у пользователя включен блокировщик рекламы.', 'bizpanda'),
 				'default' => 'visible',
 				'events' => array(
 					'visible' => array(
@@ -241,5 +241,5 @@
 
 	global $bizpanda;
 
-	FactoryMetaboxes000::register('Opanda_SettingModsMetabox', $bizpanda);
+	FactoryMetaboxes000::register('BZDA_EVO_SettingModsMetabox', $bizpanda);
 	/*@mix:place*/

@@ -1,11 +1,11 @@
 (function($) {
-	tinymce.PluginManager.add('bizpanda_evalution_addon', function(editor, url) {
+	tinymce.PluginManager.add('bizpanda_evolution_addon', function(editor, url) {
 		var menuCreated = false;
 
 		var menu = [];
 
-		editor.addButton('bizpanda_evalution_addon', {
-			title: bizpanda_evalution_shortcode_title,
+		editor.addButton('bizpanda_evolution_addon', {
+			title: bizpanda_evolution_shortcode_title,
 			type: 'menubutton',
 			icon: 'icon onp-bzda-adn-events-shortcode-icon',
 			menu: menu,
@@ -45,7 +45,7 @@
 						if( !menu.length ) {
 							menu.push({
 								value: 0,
-								text: bizpanda_evalution_not_found_text
+								text: bizpanda_evolution_not_found_text
 							});
 						}
 
