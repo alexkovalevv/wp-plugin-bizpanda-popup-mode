@@ -2,6 +2,7 @@
  * @!jsObfuscate:false
  * @!preprocess:false
  * @!uglify:true
+ * @!priority:0
  * @!lang:[]
  * @!build:['popup_mode']
  */
@@ -53,10 +54,77 @@
 		}
 	};
 
+	$.pandalocker.hooks.add('opanda-filter-default-options', function(options, locker) {
+
+		// Обновление старых тем.
+		var currentThemeName = typeof locker.options.theme === 'object' && locker.options.theme.name ?
+		                       locker.options.theme.name : null;
+		if( !currentThemeName ) {
+			currentThemeName = typeof locker.options.theme === 'string' && locker.options.theme
+				? locker.options.theme
+				: null;
+		}
+
+		var updatedThems = ['dark-force', 'great-attractor', 'friendly-giant', 'facebook'];
+
+		if( updatedThems.indexOf(currentThemeName) > -1 ) {
+
+			if( currentThemeName == 'dark-force' ) {
+				// Theme: Dark Force
+				$.pandalocker.themes['dark-force'] = {
+					socialButtons: {
+						layout: 'horizontal',
+						counter: true,
+						flip: true
+					},
+					theme: {
+						fonts: [
+							{
+								name: 'Montserrat',
+								styles: ['400', '700']
+							}
+						]
+					}
+				};
+			} else if( currentThemeName == 'friendly-giant' ) {
+				// Theme: Friendly Giant
+
+				$.pandalocker.themes['friendly-giant'] = {
+					socialButtons: {
+						layout: 'horizontal',
+						counter: true,
+						flip: true
+					},
+					theme: {
+						fonts: [
+							{
+								name: 'Open Sans',
+								styles: ['400', '700']
+							}
+						]
+					}
+				};
+			} else {
+				$.pandalocker.themes[currentThemeName] = {
+					socialButtons: {
+						layout: 'horizontal',
+						counter: true,
+						flip: true
+					}
+				};
+			}
+		}
+	});
+
 	$.pandalocker.hooks.add('opanda-filter-options', function(options, locker) {
-		if( (typeof options.theme === 'object' && options.theme.name === 'input-popup')
-			|| (typeof options.theme === 'string' && options.theme === 'input-popup')
-		) {
+
+		// Обновление старых тем.
+		var currentThemeName = typeof options.theme === 'object' && options.theme.name ?
+		                       options.theme.name : null;
+		if( !currentThemeName ) {
+			currentThemeName = typeof options.theme === 'string' && options.theme ? options.theme : null;
+		}
+		if( currentThemeName === 'facebook' ) {
 			if( !options.socialButtons ) {
 				options.socialButtons = {};
 			}
@@ -87,7 +155,10 @@
 	});
 
 	$.pandalocker.hooks.add('opanda-before-lock', function(e, locker, sender) {
-		if( typeof locker.options.theme === 'object' && locker.options.theme.name === 'input-popup' ) {
+		if( locker.options.stepToStep ) {
+			return;
+		}
+		if( typeof locker.options.theme === 'object' && locker.options.theme.name === 'facebook' ) {
 			var wrapThanksLink = $('<div class="onp-sl-wrap-thanks-link">');
 
 			if( typeof locker.options.theme === 'object' && locker.options.theme.thanksLink ) {
@@ -95,7 +166,7 @@
 				var isWrapThanksLink = locker.locker.find('.onp-sl-wrap-thanks-link').length;
 
 				if( !isWrapThanksLink ) {
-					locker.locker.find('.onp-sl-group-inner-wrap').append(wrapThanksLink);
+					locker.locker.find('.onp-sl-group-inner-wrap').after(wrapThanksLink);
 				}
 
 				var thanksText = locker.options.theme.thanksText || null;

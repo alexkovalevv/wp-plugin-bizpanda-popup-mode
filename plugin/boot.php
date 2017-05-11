@@ -13,27 +13,39 @@
 	{
 		OPanda_ThemeManager::registerTheme(array(
 			'name' => 'facebook',
-			'title' => 'Facebook [popup addon]',
-			//'path' => OPANDA_BIZPANDA_DIR . '/themes/input-popup',
+			'title' => 'Facebook [addon]',
+			'path' => BZDA_ADN_PLUGIN_DIR . '/plugin/themes/facebook',
 			'items' => array('step-to-step', 'signin-locker', 'email-locker', 'social-locker', 'custom-locker')
 		));
 		OPanda_ThemeManager::registerTheme(array(
 			'name' => 'glasscase',
-			'title' => 'Glasscase [popup addon]',
-			//'path' => OPANDA_BIZPANDA_DIR . '/themes/input-popup',
+			'title' => 'Glasscase [addon]',
+			'path' => BZDA_ADN_PLUGIN_DIR . '/plugin/themes/glasscase',
 			'items' => array('step-to-step', 'signin-locker', 'email-locker', 'social-locker', 'custom-locker')
 		));
 		OPanda_ThemeManager::registerTheme(array(
 			'name' => 'darkness',
-			'title' => 'Darkness [popup addon]',
-			//'path' => OPANDA_BIZPANDA_DIR . '/themes/input-popup',
+			'title' => 'Darkness [addon]',
+			'path' => BZDA_ADN_PLUGIN_DIR . '/plugin/themes/darkness',
 			'items' => array('step-to-step', 'signin-locker', 'email-locker', 'social-locker', 'custom-locker')
 		));
 		OPanda_ThemeManager::registerTheme(array(
 			'name' => 'download',
-			'title' => 'Download [popup addon]',
-			//'path' => OPANDA_BIZPANDA_DIR . '/themes/input-popup',
+			'title' => 'Download [addon]',
+			'path' => BZDA_ADN_PLUGIN_DIR . '/plugin/themes/download',
 			'items' => array('step-to-step', 'signin-locker', 'email-locker', 'social-locker', 'custom-locker')
+		));
+		OPanda_ThemeManager::registerTheme(array(
+			'name' => 'dark-force',
+			'title' => 'Dark Force',
+			'path' => BZDA_ADN_PLUGIN_DIR . '/plugin/themes/darkforce',
+			'items' => array('step-to-step', 'signin-locker', 'email-locker')
+		));
+		OPanda_ThemeManager::registerTheme(array(
+			'name' => 'friendly-giant',
+			'title' => 'Friendly Giant',
+			'path' => BZDA_ADN_PLUGIN_DIR . '/plugin/themes/friendly-giant',
+			'items' => array('step-to-step', 'signin-locker', 'email-locker')
 		));
 		/*OPanda_ThemeManager::registerTheme(array(
 			'name' => 'flat',

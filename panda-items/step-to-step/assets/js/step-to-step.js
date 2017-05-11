@@ -59,7 +59,12 @@
 
 	control.name = "screen-message";
 
-	control.defaults = {};
+	control.defaults = {
+		closeButton: true,
+		nextButton: true,
+		closeButtonText: 'Close window',
+		nextButtonText: 'Next step'
+	};
 
 	control.prepareOptions = function() {
 		this.options = $.extend(true, this.defaults, this.options, this.locker.options.customScreens);
@@ -67,13 +72,28 @@
 
 	control.render = function($holder) {
 		var self = this;
-		var closeButton = $('<a href="#" class="onp-sl-button onp-sl-button-primary">Закрыть окно</a>');
+
+		var wrap = $('<div class="onp-slp-control-buttons-line"></div>').appendTo($holder);
+
+		var closeButton = $('<a href="#" class="onp-sl-button onp-sl-button-primary onp-slp-close-button">' + this.options.closeButtonText + '</a>'),
+			nextButton = $('<a href="#" class="onp-sl-button onp-sl-button-primary onp-slp-next-button">' + this.options.nextButtonText + '</a>');
 
 		closeButton.click(function() {
-			self.unlock('screen-message');
+			$.pandalocker.hooks.run('opanda-step-to-step-force-unlock', [self.locker]);
 			return false;
 		});
-		$holder.append(closeButton);
+
+		nextButton.click(function() {
+			$.pandalocker.hooks.run('opanda-step-to-step-next-screen', [self.locker]);
+			return false;
+		});
+
+		if( this.options.closeButton ) {
+			wrap.append(closeButton);
+		}
+		if( this.options.nextButton ) {
+			wrap.append(nextButton)
+		}
 	};
 
 	$.pandalocker.controls["custom-screens"]["screen-message"] = control;
@@ -106,14 +126,14 @@
 	/**
 	 * Устанавливаем настройки по умолчанию
 	 */
-	$.pandalocker.hooks.add('opanda-filter-options', function(options, locker) {
-		if( !locker.options.stepToStep ) {
-			return options;
-		}
-		options.demo = true;
+	/*$.pandalocker.hooks.add('opanda-filter-options', function(options, locker) {
+	 if( !locker.options.stepToStep ) {
+	 return options;
+	 }
+	 options.demo = false;
 
-		return options;
-	});
+	 return options;
+	 });*/
 
 	/**
 	 * Задаем нулевой индекс для групп, чтобы все группы печатались, как первичные
@@ -133,6 +153,7 @@
 		if( !locker.options.stepToStep ) {
 			return options;
 		}
+
 		groupIndex = groupIndex + 1;
 
 		var groupOptionsName = $.pandalocker.tools.camelCase(group.name),
@@ -152,8 +173,6 @@
 
 			options = $.extend(options, localOptions);
 		}
-
-		//console.log(options);
 
 		return options;
 	});
@@ -178,21 +197,20 @@
 				throw new $.pandalocker.error('The screen "' + screenName + '" not found in the group "' + screenName + '"');
 			}
 
-			var screen = $("<div class='onp-sl-screen onp-sl-screen-" + screenName + "'></div>").appendTo(locker.innerWrap).hide();
+			var screen = $("<div class='onp-sl-screen onp-sl-screen-step onp-sl-screen-" + screenName + "'></div>").appendTo(locker.innerWrap).hide();
 			locker.screens[screenName] = locker._screenFactory[screenName](screen);
 		}
 
-		var dd = 2;
-		locker.locker.click(function(e) {
-			e.stopPropagation();
-			locker.screens['default'] = locker.defaultScreen = locker.screens['step-' + dd];
-			locker._showScreen('step-' + dd);
+		/*var dd = 2;
+		 locker.locker.click(function(e) {
+		 e.stopPropagation();
+		 locker.screens['default'] = locker.defaultScreen = locker.screens['step-' + dd];
+		 locker._showScreen('step-' + dd);
 
-			//locker.locker.find('.onp-sts-step-mark').removeClass('onp-sts-finish');
-			locker.locker.find('.onp-sts-step-' + (dd - 1) + '-mark').addClass('onp-sts-finish');
-			locker.runHook('next-step', ['step-' + dd], true);
-			dd++;
-		});
+		 locker.locker.find('.onp-sts-step-' + (dd - 1) + '-mark').addClass('onp-sts-finish');
+		 locker.runHook('next-step', ['step-' + dd], true);
+		 dd++;
+		 });*/
 	});
 
 	/**
@@ -229,6 +247,7 @@
 
 			if( (index + 1) <= groupIndex ) {
 				group.element.before(progressLine);
+				progressLine.find('.onp-sts-step-mark').addClass('onp-sts-top-line')
 			} else {
 
 				if( locker.screens['step-' + groupIndex] ) {
@@ -264,7 +283,10 @@
 		if( !locker.options.stepToStep ) {
 			return;
 		}
-		if( locker.options.groups && locker.options.groups.order ) {
+
+		var stopInitLocker = false;
+
+		if( locker.options.groups && locker.options.groups.order && locker.options.groups.order.length ) {
 			$.pandalocker.step_to_step.needed = locker.options.groups.order.length;
 
 			for( var i = 0; i < locker.options.groups.order.length; i++ ) {
@@ -275,20 +297,60 @@
 					}
 				);
 			}
+		} else {
+			stopInitLocker = true;
+		}
+
+		if( !locker.options.stepToStep.step1 ) {
+			stopInitLocker = true;
+		}
+
+		if( stopInitLocker ) {
+			locker._lock = function() {
+				return false;
+			};
 		}
 
 		var _unlock = locker._unlock;
 
-		locker._unlock = function(sender, sernderName, value) {
+		locker._unlock = function(sender, senderName, value) {
+
+			// если у нас системная разблокировка, то пропускаем ее.
+			if( ['button', 'form'].indexOf(sender) < 0 ) {
+				_unlock.apply(locker, [sender, senderName, value]);
+				return;
+			}
+
+			$.pandalocker.hooks.run('opanda-step-to-step-next-screen', [locker]);
+		};
+
+		var parentLockerId = locker.id;
+
+		$.pandalocker.hooks.add('opanda-step-to-step-force-unlock', function(locker) {
+			if( locker.id != parentLockerId ) {
+				return;
+			}
+
+			var storage = locker._getStateStorage();
+			storage.setState('onp_sts_unlocked', 'unlocked');
+			_unlock.apply(locker, [sender, 'step-to-step']);
+		});
+
+		$.pandalocker.hooks.add('opanda-step-to-step-next-screen', function(locker) {
+			if( locker.id != parentLockerId ) {
+				return;
+			}
 
 			$.pandalocker.step_to_step.finish++;
 
-			var finishSteps = $.pandalocker.step_to_step.finish,
+			var storage = locker._getStateStorage(),
+				finishSteps = $.pandalocker.step_to_step.finish,
 				nextStep = finishSteps + 1,
 				prevStep = nextStep - 1;
 
 			if( finishSteps >= $.pandalocker.step_to_step.needed ) {
-				_unlock.apply(locker, [sender, sernderName, value]);
+				storage.setState('onp_sts_unlocked', 'unlocked');
+				_unlock.apply(locker, [sender, 'step-to-step']);
 				return false;
 			}
 
@@ -302,9 +364,21 @@
 				return false;
 			}
 
-			console.log('screen step-' + nextStep + ' не существует');
+			// Если следующего экрана не существует, просто открываем замок
+			storage.setState('onp_sts_unlocked', 'unlocked');
+			_unlock.apply(locker, [sender, 'step-to-step']);
+		});
+	});
 
-		};
+	/**
+	 * Создаем условия, при который плагин распознает замок, открывался ли он ранее или нет.
+	 */
+	$.pandalocker.hooks.add('opanda-functions-requesting-state', function(checkFunctions, locker) {
+		checkFunctions.push(function(callback) {
+			var storage = locker._getStateStorage();
+			callback(storage.isUnlocked('onp_sts_unlocked') ? "unlocked" : "locked");
+		});
+		return checkFunctions;
 	});
 
 })(jQuery);

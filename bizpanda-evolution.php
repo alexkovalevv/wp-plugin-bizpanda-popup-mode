@@ -4,7 +4,7 @@
 	 * Plugin URI: http://byoneress.com
 	 * Description: The plugin extends conventional capabilities of plugin Optin panda.
 	 * Author: Alex Kovalev <alex.kovalevv@gmail.com>
-	 * Version: 1.0.2
+	 * Version: 1.0.3
 	 * Author URI: http://byoneress.com
 	 */
 
@@ -26,8 +26,16 @@
 
 			require_once BZDA_ADN_PLUGIN_DIR . '/panda-items/step-to-step/boot.php';
 			require_once BZDA_ADN_PLUGIN_DIR . '/plugin/boot.php';
+
+			// Подключаем styleroller addon
+			if( !defined('ONP_OP_STYLER_PLUGIN_ACTIVE') && file_exists(BZDA_ADN_PLUGIN_DIR . '/addons/styleroller/styleroller-addon.php') ) {
+				$bizpanda->loadAddons(array(
+					'styleroller' => BZDA_ADN_PLUGIN_DIR . '/addons/styleroller/styleroller-addon.php'
+				));
+			}
 		}
 	}
 
-	add_action('init', 'onp_bzda_adn_init');
+	add_action('bizpanda_init', 'onp_bzda_adn_init', 20);
+
 

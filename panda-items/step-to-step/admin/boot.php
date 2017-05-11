@@ -40,32 +40,6 @@
 	add_action('bizpanda_after_activation', 'onp_bizpanda_evo_activation', 10, 2);
 
 	/**
-	 * Регистрируем новый тип замка
-	 * @param $items
-	 * @return mixed
-	 */
-	function onp_bzda_adn_register_step_to_step_item($items)
-	{
-		global $bizpanda;
-		
-		$title = __('Замок шаг за шагом', 'plugin-addon-popup-locker');
-		
-		$items['step-to-step'] = array(
-			'name' => 'step-to-step',
-			'type' => 'premium',
-			'title' => $title,
-			'help' => opanda_get_help_url('step-to-step'),
-			'description' => '<p>' . __('<p>Пошаговые задания для всех типов замков.</p> <p>Это будет полезным, когда нужно попросить пользователя подписаться на два сообщества сразу.</p>.', 'plugin-addon-popup-locker') . '</p>',
-			'shortcode' => 'bizpanda_evo_step_to_step',
-			'plugin' => $bizpanda
-		);
-		
-		return $items;
-	}
-	
-	add_filter('bizpanda_items', 'onp_bzda_adn_register_step_to_step_item', 1);
-
-	/**
 	 * Удаляем заголовок и общее описания замка, так как для каждого шага у нас будет уникальное описание и заголовок.
 	 */
 	function onp_bzda_adn_basic_options($options)

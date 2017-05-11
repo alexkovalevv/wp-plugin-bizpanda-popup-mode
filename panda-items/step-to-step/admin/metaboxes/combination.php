@@ -58,15 +58,13 @@
 			parent::__construct($plugin);
 
 			$this->title = __('Комбинации замков', 'plugin-addon-popup-locker');
-
-			$this->prepareOptions();
 		}
 
-		public function prepareOptions()
+		public function prepareOptions($postId)
 		{
 			global $post;
 
-			$itemsRaw = get_post_meta($post->ID, 'bizpanda_evo_combo_items_options', true);
+			$itemsRaw = get_post_meta($postId, 'bizpanda_evo_combo_items_options', true);
 			$items = @json_decode($itemsRaw, ARRAY_A);
 
 			if( empty($items) ) {
@@ -249,6 +247,9 @@
 		 */
 		public function form($form)
 		{
+			global $post;
+			$this->prepareOptions($post->ID);
+
 			$items[] = array(
 				'type' => 'html',
 				'html' => array($this, 'lockersSettingHtml')
