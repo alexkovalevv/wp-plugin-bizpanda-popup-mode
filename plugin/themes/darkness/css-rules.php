@@ -15,10 +15,11 @@
 
 		$general = require($cssRulesPath . '/general.php');
 		$socialButtons = require($cssRulesPath . '/social-buttons.php');
+		$signinButtons = require($cssRulesPath . '/signin-buttons.php');
 		$actionButtons = require($cssRulesPath . '/action-buttons.php');
 		$stepToStep = require($cssRulesPath . '/step-to-step.php');
 
-		$cssRules = array_merge($general, $socialButtons, $actionButtons, $stepToStep);
+		$cssRules = array_merge($general, $socialButtons, $signinButtons, $actionButtons, $stepToStep);
 
 		return $cssRules;
 	}

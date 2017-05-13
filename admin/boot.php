@@ -16,6 +16,12 @@
 	function onp_bzda_adn_items_edit_assets($scripts, $styles)
 	{
 		$styles->add(BZDA_ADN_PLUGIN_URL . '/admin/assets/css/addon.item-edit.010001.css');
+
+		// Ddslick dropdown
+		$scripts->request(array(
+			'control.dropdown',
+			'plugin.ddslick',
+		), 'bootstrap');
 	}
 
 	add_action('bizpanda_panda-item_edit_assets', 'onp_bzda_adn_items_edit_assets', 10, 2);
@@ -117,3 +123,5 @@
 	}
 
 	add_filter('bizpanda_print_scripts_to_preview_head', 'onp_bzda_adn_print_scripts_to_preview_head', 10, 1);
+
+

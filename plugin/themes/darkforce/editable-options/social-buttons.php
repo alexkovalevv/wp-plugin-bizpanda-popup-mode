@@ -57,7 +57,7 @@
 								'title' => __('Font', 'plugin-addon-popup-locker'),
 								'default' => array(
 									'size' => 14,
-									'family' => 'Arial, "Helvetica Neue", Helvetica, sans-serif',
+									'family' => 'Montserrat, "Segoe UI", "Helvetica Neue", Arial, sans-serif',
 									'color' => '#ffffff'
 								),
 								'units' => 'px'

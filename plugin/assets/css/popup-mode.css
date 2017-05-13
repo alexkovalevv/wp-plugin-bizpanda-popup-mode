@@ -595,13 +595,10 @@
   font-family: "Segoe UI", Helvetica Neue, Helvetica, Arial, sans-serif;
   width: 150px;
   height: 45px;
-  border-radius: 25px;
-  -moz-border-radius: 25px;
   border: 6px solid rgba(255, 255, 255, 0.5);
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  -o-transition: all 0.5s;
-  transition: all 0.5s;
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
 }
 .onp-sl.onp-sl-download .onp-sl-connect-buttons .onp-sl-control:hover {
   border: 6px solid rgba(255, 255, 255, 0.8);
@@ -621,21 +618,19 @@
 }
 .onp-sl.onp-sl-download .onp-sl-connect-buttons .onp-sl-control.onp-sl-vk {
   background: #6385ad;
+  color: #37577d;
 }
 .onp-sl.onp-sl-download .onp-sl-connect-buttons .onp-sl-control.onp-sl-facebook {
   background: #3f7dc0;
+  color: #1a4d84;
 }
 .onp-sl.onp-sl-download .onp-sl-connect-buttons .onp-sl-control.onp-sl-twitter {
   color: #07466d;
   background: #50b2ef;
-  text-shadow: 1px 1px 0 #a4cce4;
-  box-shadow: inset 0 -1px 0 #347aa4, inset 0 1px 0 rgba(255, 255, 255, 0.5);
 }
 .onp-sl.onp-sl-download .onp-sl-connect-buttons .onp-sl-control.onp-sl-google {
   color: #a53324;
   background: #d86657;
-  text-shadow: 1px 1px 0 #d88479;
-  box-shadow: inset 0 -1px 0 #984c44, inset 0 1px 0 rgba(255, 255, 255, 0.5);
 }
 .onp-sl.onp-sl-download .onp-sl-subscription .onp-sl-input {
   background: #007c8c;
@@ -978,13 +973,10 @@
   font-family: "Segoe UI", Helvetica Neue, Helvetica, Arial, sans-serif;
   width: 150px;
   height: 45px;
-  border-radius: 25px;
-  -moz-border-radius: 25px;
   border: 6px solid rgba(255, 255, 255, 0.5);
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  -o-transition: all 0.5s;
-  transition: all 0.5s;
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
 }
 .onp-sl.onp-sl-facebook .onp-sl-connect-buttons .onp-sl-control:hover {
   border: 6px solid rgba(255, 255, 255, 0.8);
@@ -1004,21 +996,19 @@
 }
 .onp-sl.onp-sl-facebook .onp-sl-connect-buttons .onp-sl-control.onp-sl-vk {
   background: #6385ad;
+  color: #37577d;
 }
 .onp-sl.onp-sl-facebook .onp-sl-connect-buttons .onp-sl-control.onp-sl-facebook {
   background: #3f7dc0;
+  color: #1a4d84;
 }
 .onp-sl.onp-sl-facebook .onp-sl-connect-buttons .onp-sl-control.onp-sl-twitter {
   color: #07466d;
   background: #50b2ef;
-  text-shadow: 1px 1px 0 #a4cce4;
-  box-shadow: inset 0 -1px 0 #347aa4, inset 0 1px 0 rgba(255, 255, 255, 0.5);
 }
 .onp-sl.onp-sl-facebook .onp-sl-connect-buttons .onp-sl-control.onp-sl-google {
   color: #a53324;
   background: #d86657;
-  text-shadow: 1px 1px 0 #d88479;
-  box-shadow: inset 0 -1px 0 #984c44, inset 0 1px 0 rgba(255, 255, 255, 0.5);
 }
 .onp-sl.onp-sl-facebook .onp-sl-wrap-thanks-link {
   min-height: 25px;
@@ -1300,13 +1290,10 @@
   font-family: "Segoe UI", Helvetica Neue, Helvetica, Arial, sans-serif;
   width: 150px;
   height: 45px;
-  border-radius: 25px;
-  -moz-border-radius: 25px;
   border: 6px solid rgba(255, 255, 255, 0.5);
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  -o-transition: all 0.5s;
-  transition: all 0.5s;
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
 }
 .onp-sl.onp-sl-glasscase .onp-sl-connect-buttons .onp-sl-control:hover {
   border: 6px solid rgba(255, 255, 255, 0.8);
@@ -1326,21 +1313,19 @@
 }
 .onp-sl.onp-sl-glasscase .onp-sl-connect-buttons .onp-sl-control.onp-sl-vk {
   background: #6385ad;
+  color: #37577d;
 }
 .onp-sl.onp-sl-glasscase .onp-sl-connect-buttons .onp-sl-control.onp-sl-facebook {
   background: #3f7dc0;
+  color: #1a4d84;
 }
 .onp-sl.onp-sl-glasscase .onp-sl-connect-buttons .onp-sl-control.onp-sl-twitter {
   color: #07466d;
   background: #50b2ef;
-  text-shadow: 1px 1px 0 #a4cce4;
-  box-shadow: inset 0 -1px 0 #347aa4, inset 0 1px 0 rgba(255, 255, 255, 0.5);
 }
 .onp-sl.onp-sl-glasscase .onp-sl-connect-buttons .onp-sl-control.onp-sl-google {
   color: #a53324;
   background: #d86657;
-  text-shadow: 1px 1px 0 #d88479;
-  box-shadow: inset 0 -1px 0 #984c44, inset 0 1px 0 rgba(255, 255, 255, 0.5);
 }
 .onp-sl.onp-sl-glasscase .onp-sl-subscription .onp-sl-input {
   background: rgba(219, 219, 219, 0.57);

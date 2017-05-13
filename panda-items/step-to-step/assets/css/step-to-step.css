@@ -385,14 +385,14 @@
 /**
 *   FACEBOOK THEME
 */
+.onp-sl.onp-sl-facebook {
+  border-radius: 0;
+}
 .onp-sl.onp-sl-facebook .onp-sl-screen-step {
   padding: 0;
 }
 .onp-sl.onp-sl-facebook .onp-sl-screen .onp-sts-progress-line + .onp-sl-group {
   padding: 0;
-}
-.onp-sl.onp-sl-facebook .onp-sl-text {
-  border-radius: 0;
 }
 .onp-sl.onp-sl-facebook .onp-sts-progress-line {
   color: rgba(53, 72, 101, 0.55);
@@ -403,12 +403,10 @@
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 .onp-sl.onp-sl-facebook .onp-sts-progress-line .onp-sts-step-mark.onp-sts-top-line {
-  border-radius: 7px 7px 0 0;
   background: rgba(26, 67, 119, 0.74);
   color: #ffffff;
 }
 .onp-sl.onp-sl-facebook .onp-sts-progress-line .onp-sts-step-mark.onp-sts-top-line span {
-  border-radius: 7px 0 0 0;
   color: #e4eaf7;
   background: rgba(26, 67, 119, 0.41);
 }
@@ -417,14 +415,9 @@
   background: #eaeaea;
   color: rgba(97, 106, 121, 0.52);
 }
-.onp-sl.onp-sl-facebook .onp-sts-progress-line:last-child div,
-.onp-sl.onp-sl-facebook .onp-sts-progress-line:last-child span {
-  border-radius: 7px;
-}
 .onp-sl.onp-sl-facebook .onp-slp-control-buttons-line .onp-sl-button {
   text-shadow: none;
   border: 0;
-  border-radius: 4px;
   text-transform: capitalize;
   font-weight: bold;
   font-size: 15px;

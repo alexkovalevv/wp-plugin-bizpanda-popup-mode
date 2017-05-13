@@ -14,6 +14,7 @@
 
 		$editableOptions[] = require($editableOptionsPath . '/general.php');
 		$editableOptions[] = require($editableOptionsPath . '/social-buttons.php');
+		$editableOptions[] = require($editableOptionsPath . '/signin-buttons.php');
 		$editableOptions[] = require($editableOptionsPath . '/action-buttons.php');
 		$editableOptions[] = require($editableOptionsPath . '/step-to-step.php');
 

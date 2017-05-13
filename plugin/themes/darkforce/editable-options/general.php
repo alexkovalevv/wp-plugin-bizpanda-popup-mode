@@ -34,12 +34,16 @@
 								'default' => 1,
 								'eventsOn' => array(
 									'setValue' => array(
-										'input[name="overlap_background_image_is_active"]' => 0
+										'input[name="overlap_background_image_is_active"]' => 0,
+										'input[name="disabled_pattern_is_active"]' => 1
 									),
 									'hide' => '.factory-control-overlap_background_image'
 								),
 								'eventsOff' => array(
-									'setValue' => array('input[name="overlap_background_image_is_active"]', 1),
+									'setValue' => array(
+										'input[name="overlap_background_image_is_active"]' => 1,
+										'input[name="disabled_pattern_is_active"]' => 0
+									),
 									'show' => '.factory-control-overlap_background_image'
 								)
 							),
@@ -158,7 +162,7 @@
 								'title' => __('Header text', 'plugin-addon-popup-locker'),
 								'default' => array(
 									'size' => 30,
-									'family' => '"Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif',
+									'family' => 'Montserrat, "Segoe UI", "Helvetica Neue", Arial, sans-serif',
 									'color' => '#504e4e'
 								),
 								'units' => 'px'
@@ -169,7 +173,7 @@
 								'title' => __('Message text', 'plugin-addon-popup-locker'),
 								'default' => array(
 									'size' => 15,
-									'family' => '"Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif',
+									'family' => 'Montserrat, "Segoe UI", "Helvetica Neue", Arial, sans-serif',
 									'color' => '#504e4e'
 								),
 								'units' => 'px'

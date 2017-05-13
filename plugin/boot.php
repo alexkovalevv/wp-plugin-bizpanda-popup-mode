@@ -101,3 +101,4 @@
 	}
 
 	add_shortcode('bizpanda_open_locker', 'onp_bzda_adn_register_shortcodes');
+

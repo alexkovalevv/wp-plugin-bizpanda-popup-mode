@@ -34,12 +34,16 @@
 								'default' => 0,
 								'eventsOn' => array(
 									'setValue' => array(
-										'input[name="overlap_background_image_is_active"]' => 0
+										'input[name="overlap_background_image_is_active"]' => 0,
+										'input[name="disabled_pattern_is_active"]' => 1
 									),
 									'hide' => '.factory-control-overlap_background_image'
 								),
 								'eventsOff' => array(
-									'setValue' => array('input[name="overlap_background_image_is_active"]', 1),
+									'setValue' => array(
+										'input[name="overlap_background_image_is_active"]' => 1,
+										'input[name="disabled_pattern_is_active"]' => 0
+									),
 									'show' => '.factory-control-overlap_background_image'
 								)
 							),
