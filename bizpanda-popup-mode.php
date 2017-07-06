@@ -1,9 +1,9 @@
 <?php
 	/**
-	 * Plugin Name:[Bizpanda Addon] Social and Optin Locker evolution pack
+	 * Plugin Name:[Bizpanda Addon] Popup mode
 	 * Plugin URI: http://byoneress.com
-	 * Description: The plugin extends conventional capabilities of plugin Optin panda.
-	 * Author: Alex Kovalev <alex.kovalevv@gmail.com>
+	 * Description: Adds the ability to create locks in a pop-up window. Has a set of functions and various scenarios for calling pop-up windows.
+	 * Author: Webcraftic <alex.kovalevv@gmail.com>
 	 * Version: 1.0.3
 	 * Author URI: http://byoneress.com
 	 */
@@ -21,10 +21,8 @@
 					load_textdomain('plugin-addon-popup-locker', BZDA_ADN_PLUGIN_DIR . '/langs/' . WPLANG . '.mo');
 				}
 				require_once BZDA_ADN_PLUGIN_DIR . '/admin/boot.php';
-				require_once BZDA_ADN_PLUGIN_DIR . '/panda-items/step-to-step/admin/boot.php';
 			}
 
-			require_once BZDA_ADN_PLUGIN_DIR . '/panda-items/step-to-step/boot.php';
 			require_once BZDA_ADN_PLUGIN_DIR . '/plugin/boot.php';
 
 			// Подключаем styleroller addon
