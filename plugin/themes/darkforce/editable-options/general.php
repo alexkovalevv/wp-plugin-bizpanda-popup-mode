@@ -7,7 +7,7 @@
 	 */
 
 	return array(
-		__('General Options', 'plugin-addon-popup-locker'),
+		__('General Options', 'bizpanda-popups-addon'),
 		'top-box',
 		array(
 
@@ -18,19 +18,19 @@
 					// overlap
 					array(
 						'type' => 'accordion-item',
-						'title' => __('Overlap', 'plugin-addon-popup-locker'),
+						'title' => __('Overlap', 'bizpanda-popups-addon'),
 						'items' => array(
 							array(
 								'type' => 'color-and-opacity',
 								'name' => 'overlap_background_color',
-								'title' => __('Set up color and opacity:', 'plugin-addon-popup-locker'),
+								'title' => __('Set up color and opacity:', 'bizpanda-popups-addon'),
 								'default' => array('color' => '#fff', 'opacity' => 100)
 							),
 							array(
 								'type' => 'checkbox',
 								'way' => 'buttons',
 								'name' => 'disabled_pattern',
-								'title' => __('Disabled pattern?', 'plugin-addon-popup-locker'),
+								'title' => __('Disabled pattern?', 'bizpanda-popups-addon'),
 								'default' => 1,
 								'eventsOn' => array(
 									'setValue' => array(
@@ -50,16 +50,16 @@
 							array(
 								'type' => 'pattern',
 								'name' => 'overlap_background_image',
-								'title' => __('Set up pattern', 'plugin-addon-popup-locker'),
+								'title' => __('Set up pattern', 'bizpanda-popups-addon'),
 								'default' => array(
 									'url' => null,
-									//'url' => BZDA_ADN_PLUGIN_URL . '/plugin/assets/img/lock-content-img.png',
+									//'url' => BZDA_POPUPS_ADN_PLUGIN_URL . '/plugin/assets/img/lock-content-img.png',
 									'color' => null
 								),
 								'patterns' => array(
 									array(
-										'preview' => BZDA_ADN_PLUGIN_URL . '/plugin/assets/img/patterns-preview/lock-content-pattern-preview.jpg',
-										'pattern' => BZDA_ADN_PLUGIN_URL . '/plugin/assets/img/lock-content-img.png',
+										'preview' => BZDA_POPUPS_ADN_PLUGIN_URL . '/plugin/assets/img/patterns-preview/lock-content-pattern-preview.jpg',
+										'pattern' => BZDA_POPUPS_ADN_PLUGIN_URL . '/plugin/assets/img/lock-content-img.png',
 									)
 								)
 							)
@@ -68,7 +68,7 @@
 					// background
 					array(
 						'type' => 'accordion-item',
-						'title' => __('Background', 'plugin-addon-popup-locker'),
+						'title' => __('Background', 'bizpanda-popups-addon'),
 						'items' => array(
 							array(
 								'type' => 'control-group',
@@ -77,38 +77,38 @@
 								'items' => array(
 									array(
 										'type' => 'control-group-item',
-										'title' => __('Color', 'plugin-addon-popup-locker'),
+										'title' => __('Color', 'bizpanda-popups-addon'),
 										'name' => 'color',
 										'items' => array(
 											array(
 												'type' => 'color-and-opacity',
 												'name' => 'background_color',
-												'title' => __('Set up color and opacity:', 'plugin-addon-popup-locker'),
+												'title' => __('Set up color and opacity:', 'bizpanda-popups-addon'),
 												'default' => array('color' => '#031f34', 'opacity' => 85)
 											)
 										)
 									),
 									array(
 										'type' => 'control-group-item',
-										'title' => __('Gradient', 'plugin-addon-popup-locker'),
+										'title' => __('Gradient', 'bizpanda-popups-addon'),
 										'name' => 'gradient',
 										'items' => array(
 											array(
 												'type' => 'gradient',
 												'name' => 'background_gradient',
-												'title' => __('Set up gradient:', 'plugin-addon-popup-locker')
+												'title' => __('Set up gradient:', 'bizpanda-popups-addon')
 											)
 										)
 									),
 									array(
 										'type' => 'control-group-item',
-										'title' => __('Pattern', 'plugin-addon-popup-locker'),
+										'title' => __('Pattern', 'bizpanda-popups-addon'),
 										'name' => 'image',
 										'items' => array(
 											array(
 												'type' => 'pattern',
 												'name' => 'background_image',
-												'title' => __('Set up pattern', 'plugin-addon-popup-locker')
+												'title' => __('Set up pattern', 'bizpanda-popups-addon')
 											)
 										)
 									),
@@ -119,24 +119,24 @@
 					// outer borders
 					array(
 						'type' => 'accordion-item',
-						'title' => __('Outer Border', 'plugin-addon-popup-locker'),
+						'title' => __('Outer Border', 'bizpanda-popups-addon'),
 						'items' => array(
 							array(
 								'type' => 'color-and-opacity',
 								'name' => 'outer_border_color',
-								'title' => __('Set up color for outer border:', 'plugin-addon-popup-locker'),
+								'title' => __('Set up color for outer border:', 'bizpanda-popups-addon'),
 								'default' => array('color' => '#000', 'opacity' => 20)
 							),
 							array(
 								'type' => 'color-and-opacity',
 								'name' => 'outer_border_bottom_color',
-								'title' => __('Set up color for bottom border:', 'plugin-addon-popup-locker'),
+								'title' => __('Set up color for bottom border:', 'bizpanda-popups-addon'),
 								'default' => array('color' => '#000', 'opacity' => 50)
 							),
 							array(
 								'type' => 'paddings-editor',
 								'name' => 'outer_border_size',
-								'title' => __('Outer border width', 'plugin-addon-popup-locker'),
+								'title' => __('Outer border width', 'bizpanda-popups-addon'),
 								'units' => 'px',
 								'default' => '1px 5px 1px 1px'
 							),
@@ -144,7 +144,7 @@
 								'type' => 'integer',
 								'way' => 'slider',
 								'name' => 'outer_border_radius',
-								'title' => __('Outer border radius', 'plugin-addon-popup-locker'),
+								'title' => __('Outer border radius', 'bizpanda-popups-addon'),
 								'range' => array(0, 99),
 								'default' => 5,
 								'units' => 'px'
@@ -154,12 +154,12 @@
 					// font options
 					array(
 						'type' => 'accordion-item',
-						'title' => __('Text', 'plugin-addon-popup-locker'),
+						'title' => __('Text', 'bizpanda-popups-addon'),
 						'items' => array(
 							array(
 								'type' => 'font',
 								'name' => 'header_text',
-								'title' => __('Header text', 'plugin-addon-popup-locker'),
+								'title' => __('Header text', 'bizpanda-popups-addon'),
 								'default' => array(
 									'size' => 30,
 									'family' => 'Montserrat, "Segoe UI", "Helvetica Neue", Arial, sans-serif',
@@ -170,7 +170,7 @@
 							array(
 								'type' => 'font',
 								'name' => 'message_text',
-								'title' => __('Message text', 'plugin-addon-popup-locker'),
+								'title' => __('Message text', 'bizpanda-popups-addon'),
 								'default' => array(
 									'size' => 15,
 									'family' => 'Montserrat, "Segoe UI", "Helvetica Neue", Arial, sans-serif',
@@ -183,12 +183,12 @@
 					//  paddings options
 					array(
 						'type' => 'accordion-item',
-						'title' => __('Paddings', 'plugin-addon-popup-locker'),
+						'title' => __('Paddings', 'bizpanda-popups-addon'),
 						'items' => array(
 							array(
 								'type' => 'paddings-editor',
 								'name' => 'container_paddings',
-								'title' => __('Box paddings', 'plugin-addon-popup-locker'),
+								'title' => __('Box paddings', 'bizpanda-popups-addon'),
 								'units' => 'px',
 								'default' => '15px 15px 15px 15px'
 							),
@@ -196,7 +196,7 @@
 								'type' => 'integer',
 								'name' => 'after_header_margin',
 								'way' => 'slider',
-								'title' => __('Margin after header', 'plugin-addon-popup-locker'),
+								'title' => __('Margin after header', 'bizpanda-popups-addon'),
 								'units' => 'px',
 								'default' => '0'
 							),
@@ -204,7 +204,7 @@
 								'type' => 'integer',
 								'name' => 'after_message_margin',
 								'way' => 'slider',
-								'title' => __('Margin after message', 'plugin-addon-popup-locker'),
+								'title' => __('Margin after message', 'bizpanda-popups-addon'),
 								'units' => 'px',
 								'default' => '3'
 							),
@@ -212,7 +212,7 @@
 								'type' => 'integer',
 								'name' => 'after_controls_margin',
 								'way' => 'slider',
-								'title' => __('Margin after controls', 'plugin-addon-popup-locker'),
+								'title' => __('Margin after controls', 'bizpanda-popups-addon'),
 								'units' => 'px',
 								'default' => '0'
 							),

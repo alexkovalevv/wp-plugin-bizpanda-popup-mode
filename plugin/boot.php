@@ -9,42 +9,42 @@
 	/**
 	 * Регистрируем новую тему Input popup
 	 */
-	function onp_bzda_adn_register_social_locker_themes()
+	function onp_bzda_popups_adn_register_social_locker_themes()
 	{
 		OPanda_ThemeManager::registerTheme(array(
 			'name' => 'facebook',
 			'title' => 'Facebook [addon]',
-			'path' => BZDA_ADN_PLUGIN_DIR . '/plugin/themes/facebook',
+			'path' => BZDA_POPUPS_ADN_PLUGIN_DIR . '/plugin/themes/facebook',
 			'items' => array('step-to-step', 'signin-locker', 'email-locker', 'social-locker', 'custom-locker')
 		));
 		OPanda_ThemeManager::registerTheme(array(
 			'name' => 'glasscase',
 			'title' => 'Glasscase [addon]',
-			'path' => BZDA_ADN_PLUGIN_DIR . '/plugin/themes/glasscase',
+			'path' => BZDA_POPUPS_ADN_PLUGIN_DIR . '/plugin/themes/glasscase',
 			'items' => array('step-to-step', 'signin-locker', 'email-locker', 'social-locker', 'custom-locker')
 		));
 		OPanda_ThemeManager::registerTheme(array(
 			'name' => 'darkness',
 			'title' => 'Darkness [addon]',
-			'path' => BZDA_ADN_PLUGIN_DIR . '/plugin/themes/darkness',
+			'path' => BZDA_POPUPS_ADN_PLUGIN_DIR . '/plugin/themes/darkness',
 			'items' => array('step-to-step', 'signin-locker', 'email-locker', 'social-locker', 'custom-locker')
 		));
 		OPanda_ThemeManager::registerTheme(array(
 			'name' => 'download',
 			'title' => 'Download [addon]',
-			'path' => BZDA_ADN_PLUGIN_DIR . '/plugin/themes/download',
+			'path' => BZDA_POPUPS_ADN_PLUGIN_DIR . '/plugin/themes/download',
 			'items' => array('step-to-step', 'signin-locker', 'email-locker', 'social-locker', 'custom-locker')
 		));
 		OPanda_ThemeManager::registerTheme(array(
 			'name' => 'dark-force',
 			'title' => 'Dark Force',
-			'path' => BZDA_ADN_PLUGIN_DIR . '/plugin/themes/darkforce',
+			'path' => BZDA_POPUPS_ADN_PLUGIN_DIR . '/plugin/themes/darkforce',
 			'items' => array('step-to-step', 'signin-locker', 'email-locker')
 		));
 		OPanda_ThemeManager::registerTheme(array(
 			'name' => 'friendly-giant',
 			'title' => 'Friendly Giant',
-			'path' => BZDA_ADN_PLUGIN_DIR . '/plugin/themes/friendly-giant',
+			'path' => BZDA_POPUPS_ADN_PLUGIN_DIR . '/plugin/themes/friendly-giant',
 			'items' => array('step-to-step', 'signin-locker', 'email-locker')
 		));
 		/*OPanda_ThemeManager::registerTheme(array(
@@ -56,30 +56,36 @@
 		));*/
 	}
 
-	add_action('bizpanda_register_themes', 'onp_bzda_adn_register_social_locker_themes');
+	add_action('bizpanda_register_themes', 'onp_bzda_popups_adn_register_social_locker_themes');
 
 	/**
 	 * Подключаем скрипты для фронтенда
 	 */
-	function onp_bzda_adn_connect_locker_assets()
+	function onp_bzda_popups_adn_connect_locker_assets()
 	{
-		wp_enqueue_style('onp-bizpanda-popup-mode', BZDA_ADN_PLUGIN_URL . '/plugin/assets/css/popup-mode.min.css');
-		wp_enqueue_script('onp-bizpanda-popup-mode', BZDA_ADN_PLUGIN_URL . '/plugin/assets/js/popup-mode.min.js', array(
+		global $bizpanda_popups_addon;
+
+		if( !$bizpanda_popups_addon->isPluginLoaded() ) {
+			return;
+		}
+
+		wp_enqueue_style('onp-bizpanda-popup-mode', BZDA_POPUPS_ADN_PLUGIN_URL . '/plugin/assets/css/popup-mode.min.css');
+		wp_enqueue_script('onp-bizpanda-popup-mode', BZDA_POPUPS_ADN_PLUGIN_URL . '/plugin/assets/js/popup-mode.min.js', array(
 			'opanda-lockers'
 		), false, true);
 
 		// Определение adblock
-		wp_enqueue_script('onp-bizpanda-detect-adblock', BZDA_ADN_PLUGIN_URL . '/plugin/assets/js/ads.js', array(
+		wp_enqueue_script('onp-bizpanda-detect-adblock', BZDA_POPUPS_ADN_PLUGIN_URL . '/plugin/assets/js/ads.js', array(
 			'onp-bizpanda-popup-mode'
 		), false, true);
 	}
 
-	add_action('bizpanda_connect_locker_assets', 'onp_bzda_adn_connect_locker_assets');
+	add_action('bizpanda_connect_locker_assets', 'onp_bzda_popups_adn_connect_locker_assets');
 
 	/**
 	 * Печатаем дополнительные настройки на фронтенд
 	 */
-	function onp_bzda_adn_frontend_item_options($options, $lockerId)
+	function onp_bzda_popups_adn_frontend_item_options($options, $lockerId)
 	{
 		$options['lock_mode'] = opanda_get_item_option($lockerId, 'lock_mode');
 		$options['open_locker_trigger'] = opanda_get_item_option($lockerId, 'open_locker_trigger');
@@ -89,9 +95,9 @@
 		return $options;
 	}
 
-	add_filter('bizpanda_item_options', 'onp_bzda_adn_frontend_item_options', 10, 2);
+	add_filter('bizpanda_item_options', 'onp_bzda_popups_adn_frontend_item_options', 10, 2);
 
-	function onp_bzda_adn_register_shortcodes($atts, $content = "")
+	function onp_bzda_popups_adn_register_shortcodes($atts, $content = "")
 	{
 		$atts = shortcode_atts(array(
 			'locker_id' => ''
@@ -100,5 +106,5 @@
 		return '<div class="onp-open-locker-selector" style="cursor:pointer;" data-locker-id="' . sanitize_text_field($atts['locker_id']) . '">' . $content . '</div>';
 	}
 
-	add_shortcode('bizpanda_open_locker', 'onp_bzda_adn_register_shortcodes');
+	add_shortcode('bizpanda_open_locker', 'onp_bzda_popups_adn_register_shortcodes');
 

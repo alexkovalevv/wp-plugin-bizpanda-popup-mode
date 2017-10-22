@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: sociallocker\n"
-"POT-Creation-Date: 2017-04-26 04:06+0300\n"
-"PO-Revision-Date: 2017-04-26 04:07+0300\n"
+"POT-Creation-Date: 2017-10-22 14:43+0300\n"
+"PO-Revision-Date: 2017-10-22 14:44+0300\n"
 "Last-Translator: alex.kovalevv@gmail.com <alex.kovalevv@gmail.com>\n"
 "Language-Team: Alex Kovalev <alex.kovalevv@gmail.com>\n"
 "Language: ru_RU\n"
@@ -17,49 +17,696 @@ msgstr ""
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c\n"
 "X-Poedit-SearchPath-0: .\n"
 
+#: admin/activation.php:41
+msgid ""
+"Please, activate the plugin to get started. Enter a key\n"
+"                                    you received with the plugin into the "
+"form below."
+msgstr ""
+"Пожалуйста, активируйте плагин, чтобы приступить к работе. Введите ключ, "
+"который вы получили, в поле ниже. Не знаете где ключ? <a href=\"#\" id="
+"\"open-faq\">Нажмите здесь</a>."
+
+#: admin/boot.php:47
+msgid ""
+"Выделите ссылку, кнопку или картинку, чтобы присвоить им действие, которое "
+"вызовет замок."
+msgstr ""
+
+#: admin/boot.php:48
+msgid "-- Еще нет замков с выбранным режимом --"
+msgstr ""
+
 #: admin/metaboxes/bulk-locking.php:51
 msgid "Fullscreen Lock"
 msgstr "Скрыть всю страницу"
 
-#: admin/metaboxes/bulk-locking.php:101 admin/metaboxes/bulk-locking.php:179
+#: admin/metaboxes/bulk-locking.php:107 admin/metaboxes/bulk-locking.php:185
 msgid "Every page will be full hidden under locker, with the background."
 msgstr "Каждая страница будет полностью скрыта под замком, включая фон."
 
-#: admin/metaboxes/bulk-locking.php:106
+#: admin/metaboxes/bulk-locking.php:112
 msgid "Only selected Posts"
 msgstr "Только выбранные страницы"
 
-#: admin/metaboxes/bulk-locking.php:114 admin/metaboxes/bulk-locking.php:128
+#: admin/metaboxes/bulk-locking.php:120 admin/metaboxes/bulk-locking.php:134
 msgid "(Optional) Enter posts IDs comma separated, for example, \"19,25,33\"."
 msgstr ""
 "(Необязательно) Введите ID страниц через запятую, например: \"19,25,33\"."
 
-#: admin/metaboxes/bulk-locking.php:120
+#: admin/metaboxes/bulk-locking.php:126
 msgid "Exclude Posts"
 msgstr "Не блокировать указанные записи:"
 
-#: admin/metaboxes/bulk-locking.php:132
+#: admin/metaboxes/bulk-locking.php:138
 msgid "Exclude Categories"
 msgstr "Не блокировать указанные категории:"
 
-#: admin/metaboxes/bulk-locking.php:140
+#: admin/metaboxes/bulk-locking.php:146
 msgid "(Optional) Enter categories IDs comma separated, for example, \"4,7\"."
 msgstr "(Необязательно) Введите ID категорий через запятую, например: \"7,4\"."
 
-#: admin/metaboxes/bulk-locking.php:145
+#: admin/metaboxes/bulk-locking.php:151
 msgid "Posts types to lock"
 msgstr "Типы записей для блокировки"
 
-#: admin/metaboxes/bulk-locking.php:148
+#: admin/metaboxes/bulk-locking.php:154
 msgid "Choose post types for batch locking."
 msgstr "Выберите типы страниц для блокировки"
 
-#: admin/metaboxes/bulk-locking.php:163
+#: admin/metaboxes/bulk-locking.php:169
 msgid ""
 "Please choose at least one post type to lock. Otherwise, nothing to lock."
 msgstr ""
 "Пожалуйста, выберите хотя бы один тип записей для блокировки контента. В "
 "противном случае, ничего не будет заблокировано."
+
+#: admin/metaboxes/setting-mods.php:54
+msgid "Настройка режимов"
+msgstr ""
+
+#: admin/metaboxes/setting-mods.php:85
+msgid "Внутри страницы (стандартно)"
+msgstr ""
+
+#: admin/metaboxes/setting-mods.php:89
+msgid "Страницу целиком (попап)"
+msgstr ""
+
+#: admin/metaboxes/setting-mods.php:90
+msgid ""
+"Чтобы настроить этот режим, откройте <a href=\"#onp-sl-bulk-lock-modal\" "
+"class=\"onp-sl-activate-fullscreen-tab\" role=\"button\" data-toggle="
+"\"factory-modal\">настройки массовой блокировки</a>."
+msgstr ""
+
+#: admin/metaboxes/setting-mods.php:93
+msgid "Как скрывать контент?"
+msgstr ""
+
+#: admin/metaboxes/setting-mods.php:94
+msgid ""
+"Выберите режим, каким образом вам нужно заблокировать контент. Выбрав режим "
+"\"внутренний контент\", замок будет блокировать контент только внутри ваших "
+"статей или частей сайта. Режим \"скрыть всю страницу\", позволяет "
+"заблокировать всю страницу целиком."
+msgstr ""
+
+#: admin/metaboxes/setting-mods.php:155
+msgid "Просмотр"
+msgstr ""
+
+#: admin/metaboxes/setting-mods.php:159
+msgid "Блокировщик рекламы"
+msgstr ""
+
+#: admin/metaboxes/setting-mods.php:163
+msgid "Нажатие"
+msgstr ""
+
+#: admin/metaboxes/setting-mods.php:167
+msgid "Наведение"
+msgstr ""
+
+#: admin/metaboxes/setting-mods.php:170
+msgid "Выберите событие, когда должен появится замок"
+msgstr ""
+
+#: admin/metaboxes/setting-mods.php:171
+msgid ""
+"Выбрав событие, например \"нажатие\", замок появится на странице, только "
+"после нажатие на установленный вами объект (кнопку, ссылку и прочее). Также "
+"замок может быть вызван, если у пользователя включен блокировщик рекламы."
+msgstr ""
+
+#: admin/metaboxes/setting-mods.php:199
+msgid "Через шорткод"
+msgstr ""
+
+#: admin/metaboxes/setting-mods.php:200
+msgid "Чтобы установить событие для объекта, нужно обернуть его шорткодом."
+msgstr ""
+
+#: admin/metaboxes/setting-mods.php:204
+msgid "Через css селектор"
+msgstr ""
+
+#: admin/metaboxes/setting-mods.php:205
+msgid ""
+"При нажатии или наведении на выбранный с помощью css селектора объект, "
+"содержание страницы будет заблокировано."
+msgstr ""
+
+#: admin/metaboxes/setting-mods.php:208
+msgid "Как установить событие?"
+msgstr ""
+
+#: admin/metaboxes/setting-mods.php:209
+msgid ""
+"Вы можете разместить ссылку с событием всплывающего окна двумя способами. "
+"Первый это простой шорткод, который вы сможете вставть в любом месте статьи "
+"или виджета. Второй способ более сложный, но и более удобный. Вы можете "
+"присвоить событие всплывающего окна для всех ссылок размещенных на странице "
+"без вставки шорткодов."
+msgstr ""
+
+#: admin/metaboxes/setting-mods.php:229
+msgid "Пример шорткода"
+msgstr ""
+
+#: admin/metaboxes/setting-mods.php:230
+msgid ""
+"Этот пример шорткода, который вы можете включить в контент вашей страницы. "
+"Оберните ссылку, кнопку или картинку, как в примере выше, чтобы установить "
+"для нее событие вызова окна с замком."
+msgstr ""
+
+#: admin/metaboxes/setting-mods.php:231
+msgid "Текст ссылки"
+msgstr ""
+
+#: admin/metaboxes/setting-mods.php:243
+msgid "Css селектор"
+msgstr ""
+
+#: admin/metaboxes/setting-mods.php:244
+msgid ""
+"Введите css селектор ссылки или кнопки. Например: \"#somecontent .my-class, ."
+"my-another-class\""
+msgstr ""
+
+#: admin/pages/license-manager.php:45
+msgid "Social Locker"
+msgstr "Социальный замок"
+
+#: plugin/themes/darkforce/editable-options/action-buttons.php:14
+#: plugin/themes/darkness/editable-options/action-buttons.php:14
+#: plugin/themes/download/editable-options/action-buttons.php:14
+#: plugin/themes/facebook/editable-options/action-buttons.php:14
+#: plugin/themes/friendly-giant/editable-options/action-buttons.php:14
+#: plugin/themes/glasscase/editable-options/action-buttons.php:14
+msgid "Actions Buttons"
+msgstr ""
+
+#: plugin/themes/darkforce/editable-options/action-buttons.php:25
+#: plugin/themes/darkness/editable-options/action-buttons.php:25
+#: plugin/themes/download/editable-options/action-buttons.php:25
+#: plugin/themes/facebook/editable-options/action-buttons.php:25
+#: plugin/themes/friendly-giant/editable-options/action-buttons.php:25
+#: plugin/themes/glasscase/editable-options/action-buttons.php:25
+msgid "Close window button"
+msgstr ""
+
+#: plugin/themes/darkforce/editable-options/action-buttons.php:30
+#: plugin/themes/darkforce/editable-options/action-buttons.php:49
+#: plugin/themes/darkness/editable-options/action-buttons.php:30
+#: plugin/themes/darkness/editable-options/action-buttons.php:49
+#: plugin/themes/download/editable-options/action-buttons.php:30
+#: plugin/themes/download/editable-options/action-buttons.php:49
+#: plugin/themes/facebook/editable-options/action-buttons.php:30
+#: plugin/themes/facebook/editable-options/action-buttons.php:49
+#: plugin/themes/friendly-giant/editable-options/action-buttons.php:30
+#: plugin/themes/friendly-giant/editable-options/action-buttons.php:49
+#: plugin/themes/glasscase/editable-options/action-buttons.php:30
+#: plugin/themes/glasscase/editable-options/action-buttons.php:49
+msgid "Set up background color:"
+msgstr ""
+
+#: plugin/themes/darkforce/editable-options/action-buttons.php:36
+#: plugin/themes/darkforce/editable-options/action-buttons.php:55
+#: plugin/themes/darkness/editable-options/action-buttons.php:36
+#: plugin/themes/darkness/editable-options/action-buttons.php:55
+#: plugin/themes/download/editable-options/action-buttons.php:36
+#: plugin/themes/download/editable-options/action-buttons.php:55
+#: plugin/themes/facebook/editable-options/action-buttons.php:36
+#: plugin/themes/facebook/editable-options/action-buttons.php:55
+#: plugin/themes/friendly-giant/editable-options/action-buttons.php:36
+#: plugin/themes/friendly-giant/editable-options/action-buttons.php:55
+#: plugin/themes/glasscase/editable-options/action-buttons.php:36
+#: plugin/themes/glasscase/editable-options/action-buttons.php:55
+msgid "Set up text color:"
+msgstr ""
+
+#: plugin/themes/darkforce/editable-options/action-buttons.php:44
+#: plugin/themes/darkness/editable-options/action-buttons.php:44
+#: plugin/themes/download/editable-options/action-buttons.php:44
+#: plugin/themes/facebook/editable-options/action-buttons.php:44
+#: plugin/themes/friendly-giant/editable-options/action-buttons.php:44
+#: plugin/themes/glasscase/editable-options/action-buttons.php:44
+msgid "Next screen button"
+msgstr ""
+
+#: plugin/themes/darkforce/editable-options/general.php:10
+#: plugin/themes/darkness/editable-options/general.php:10
+#: plugin/themes/download/editable-options/general.php:10
+#: plugin/themes/facebook/editable-options/general.php:10
+#: plugin/themes/friendly-giant/editable-options/general.php:10
+#: plugin/themes/glasscase/editable-options/general.php:10
+msgid "General Options"
+msgstr ""
+
+#: plugin/themes/darkforce/editable-options/general.php:21
+#: plugin/themes/darkness/editable-options/general.php:21
+#: plugin/themes/download/editable-options/general.php:21
+#: plugin/themes/facebook/editable-options/general.php:21
+#: plugin/themes/friendly-giant/editable-options/general.php:21
+#: plugin/themes/glasscase/editable-options/general.php:21
+msgid "Overlap"
+msgstr ""
+
+#: plugin/themes/darkforce/editable-options/general.php:26
+#: plugin/themes/darkforce/editable-options/general.php:86
+#: plugin/themes/darkness/editable-options/general.php:26
+#: plugin/themes/darkness/editable-options/general.php:85
+#: plugin/themes/download/editable-options/general.php:26
+#: plugin/themes/download/editable-options/general.php:85
+#: plugin/themes/facebook/editable-options/general.php:26
+#: plugin/themes/facebook/editable-options/general.php:85
+#: plugin/themes/friendly-giant/editable-options/general.php:26
+#: plugin/themes/friendly-giant/editable-options/general.php:86
+#: plugin/themes/glasscase/editable-options/general.php:26
+#: plugin/themes/glasscase/editable-options/general.php:85
+msgid "Set up color and opacity:"
+msgstr "Задайте цвет и прозрачность"
+
+#: plugin/themes/darkforce/editable-options/general.php:33
+#: plugin/themes/darkness/editable-options/general.php:33
+#: plugin/themes/download/editable-options/general.php:33
+#: plugin/themes/facebook/editable-options/general.php:33
+#: plugin/themes/friendly-giant/editable-options/general.php:33
+#: plugin/themes/glasscase/editable-options/general.php:33
+msgid "Disabled pattern?"
+msgstr ""
+
+#: plugin/themes/darkforce/editable-options/general.php:53
+#: plugin/themes/darkforce/editable-options/general.php:111
+#: plugin/themes/darkness/editable-options/general.php:53
+#: plugin/themes/darkness/editable-options/general.php:110
+#: plugin/themes/download/editable-options/general.php:53
+#: plugin/themes/download/editable-options/general.php:110
+#: plugin/themes/facebook/editable-options/general.php:53
+#: plugin/themes/facebook/editable-options/general.php:110
+#: plugin/themes/friendly-giant/editable-options/general.php:53
+#: plugin/themes/friendly-giant/editable-options/general.php:111
+#: plugin/themes/glasscase/editable-options/general.php:53
+#: plugin/themes/glasscase/editable-options/general.php:110
+msgid "Set up pattern"
+msgstr "Выберите фоновое изображение"
+
+#: plugin/themes/darkforce/editable-options/general.php:71
+#: plugin/themes/darkness/editable-options/general.php:70
+#: plugin/themes/download/editable-options/general.php:70
+#: plugin/themes/facebook/editable-options/general.php:70
+#: plugin/themes/friendly-giant/editable-options/general.php:71
+#: plugin/themes/glasscase/editable-options/general.php:70
+msgid "Background"
+msgstr "Фон"
+
+#: plugin/themes/darkforce/editable-options/general.php:80
+#: plugin/themes/darkness/editable-options/general.php:79
+#: plugin/themes/download/editable-options/general.php:79
+#: plugin/themes/facebook/editable-options/general.php:79
+#: plugin/themes/friendly-giant/editable-options/general.php:80
+#: plugin/themes/glasscase/editable-options/general.php:79
+msgid "Color"
+msgstr "Цвет"
+
+#: plugin/themes/darkforce/editable-options/general.php:93
+#: plugin/themes/darkness/editable-options/general.php:92
+#: plugin/themes/download/editable-options/general.php:92
+#: plugin/themes/facebook/editable-options/general.php:92
+#: plugin/themes/friendly-giant/editable-options/general.php:93
+#: plugin/themes/glasscase/editable-options/general.php:92
+msgid "Gradient"
+msgstr "Градиент"
+
+#: plugin/themes/darkforce/editable-options/general.php:99
+#: plugin/themes/darkness/editable-options/general.php:98
+#: plugin/themes/download/editable-options/general.php:98
+#: plugin/themes/facebook/editable-options/general.php:98
+#: plugin/themes/friendly-giant/editable-options/general.php:99
+#: plugin/themes/glasscase/editable-options/general.php:98
+msgid "Set up gradient:"
+msgstr "Настройте градиент:"
+
+#: plugin/themes/darkforce/editable-options/general.php:105
+#: plugin/themes/darkness/editable-options/general.php:104
+#: plugin/themes/download/editable-options/general.php:104
+#: plugin/themes/facebook/editable-options/general.php:104
+#: plugin/themes/friendly-giant/editable-options/general.php:105
+#: plugin/themes/glasscase/editable-options/general.php:104
+msgid "Pattern"
+msgstr "Изображение"
+
+#: plugin/themes/darkforce/editable-options/general.php:122
+#: plugin/themes/darkness/editable-options/general.php:121
+#: plugin/themes/download/editable-options/general.php:127
+#: plugin/themes/friendly-giant/editable-options/general.php:122
+#: plugin/themes/glasscase/editable-options/general.php:121
+msgid "Outer Border"
+msgstr "Внешняя граница"
+
+#: plugin/themes/darkforce/editable-options/general.php:127
+#: plugin/themes/darkness/editable-options/general.php:126
+#: plugin/themes/download/editable-options/general.php:132
+#: plugin/themes/friendly-giant/editable-options/general.php:127
+#: plugin/themes/glasscase/editable-options/general.php:126
+msgid "Set up color for outer border:"
+msgstr "Задайте цвет внешней границы"
+
+#: plugin/themes/darkforce/editable-options/general.php:133
+#: plugin/themes/friendly-giant/editable-options/general.php:133
+msgid "Set up color for bottom border:"
+msgstr ""
+
+#: plugin/themes/darkforce/editable-options/general.php:139
+#: plugin/themes/darkness/editable-options/general.php:144
+#: plugin/themes/download/editable-options/general.php:150
+#: plugin/themes/friendly-giant/editable-options/general.php:139
+#: plugin/themes/glasscase/editable-options/general.php:144
+msgid "Outer border width"
+msgstr "Ширина внешней границы"
+
+#: plugin/themes/darkforce/editable-options/general.php:147
+#: plugin/themes/darkness/editable-options/general.php:153
+#: plugin/themes/download/editable-options/general.php:159
+#: plugin/themes/friendly-giant/editable-options/general.php:147
+#: plugin/themes/glasscase/editable-options/general.php:153
+msgid "Outer border radius"
+msgstr "Радиус внешней границы"
+
+#: plugin/themes/darkforce/editable-options/general.php:157
+#: plugin/themes/darkness/editable-options/general.php:163
+#: plugin/themes/download/editable-options/general.php:169
+#: plugin/themes/facebook/editable-options/general.php:121
+#: plugin/themes/friendly-giant/editable-options/general.php:157
+#: plugin/themes/glasscase/editable-options/general.php:163
+msgid "Text"
+msgstr "Текст"
+
+#: plugin/themes/darkforce/editable-options/general.php:162
+#: plugin/themes/darkness/editable-options/general.php:168
+#: plugin/themes/download/editable-options/general.php:174
+#: plugin/themes/facebook/editable-options/general.php:126
+#: plugin/themes/friendly-giant/editable-options/general.php:162
+#: plugin/themes/glasscase/editable-options/general.php:168
+msgid "Header text"
+msgstr "Текст заголовка"
+
+#: plugin/themes/darkforce/editable-options/general.php:173
+#: plugin/themes/darkness/editable-options/general.php:179
+#: plugin/themes/download/editable-options/general.php:185
+#: plugin/themes/facebook/editable-options/general.php:137
+#: plugin/themes/friendly-giant/editable-options/general.php:173
+#: plugin/themes/glasscase/editable-options/general.php:179
+msgid "Message text"
+msgstr "Текст сообщения"
+
+#: plugin/themes/darkforce/editable-options/general.php:186
+#: plugin/themes/darkness/editable-options/general.php:192
+#: plugin/themes/download/editable-options/general.php:198
+#: plugin/themes/facebook/editable-options/general.php:150
+#: plugin/themes/friendly-giant/editable-options/general.php:186
+#: plugin/themes/glasscase/editable-options/general.php:192
+msgid "Paddings"
+msgstr "Отступы"
+
+#: plugin/themes/darkforce/editable-options/general.php:191
+#: plugin/themes/darkness/editable-options/general.php:197
+#: plugin/themes/download/editable-options/general.php:203
+#: plugin/themes/friendly-giant/editable-options/general.php:191
+#: plugin/themes/glasscase/editable-options/general.php:197
+msgid "Box paddings"
+msgstr "Внутренние отступы контейнера"
+
+#: plugin/themes/darkforce/editable-options/general.php:199
+#: plugin/themes/darkness/editable-options/general.php:205
+#: plugin/themes/download/editable-options/general.php:211
+#: plugin/themes/facebook/editable-options/general.php:156
+#: plugin/themes/friendly-giant/editable-options/general.php:199
+#: plugin/themes/glasscase/editable-options/general.php:205
+msgid "Margin after header"
+msgstr "Отступ после заголовка"
+
+#: plugin/themes/darkforce/editable-options/general.php:207
+#: plugin/themes/darkness/editable-options/general.php:213
+#: plugin/themes/download/editable-options/general.php:219
+#: plugin/themes/facebook/editable-options/general.php:164
+#: plugin/themes/friendly-giant/editable-options/general.php:207
+#: plugin/themes/glasscase/editable-options/general.php:213
+msgid "Margin after message"
+msgstr "Отступ после сообщения"
+
+#: plugin/themes/darkforce/editable-options/general.php:215
+#: plugin/themes/darkness/editable-options/general.php:221
+#: plugin/themes/download/editable-options/general.php:227
+#: plugin/themes/facebook/editable-options/general.php:172
+#: plugin/themes/friendly-giant/editable-options/general.php:215
+#: plugin/themes/glasscase/editable-options/general.php:221
+msgid "Margin after controls"
+msgstr ""
+
+#: plugin/themes/darkforce/editable-options/signin-buttons.php:10
+#: plugin/themes/darkness/editable-options/signin-buttons.php:10
+#: plugin/themes/download/editable-options/signin-buttons.php:10
+#: plugin/themes/facebook/editable-options/signin-buttons.php:10
+#: plugin/themes/friendly-giant/editable-options/signin-buttons.php:10
+#: plugin/themes/glasscase/editable-options/signin-buttons.php:10
+msgid "SignIn Buttons"
+msgstr ""
+
+#: plugin/themes/darkforce/editable-options/signin-buttons.php:21
+#: plugin/themes/darkforce/editable-options/social-buttons.php:21
+#: plugin/themes/darkness/editable-options/signin-buttons.php:21
+#: plugin/themes/darkness/editable-options/social-buttons.php:21
+#: plugin/themes/download/editable-options/signin-buttons.php:21
+#: plugin/themes/download/editable-options/social-buttons.php:21
+#: plugin/themes/facebook/editable-options/signin-buttons.php:21
+#: plugin/themes/facebook/editable-options/social-buttons.php:21
+#: plugin/themes/friendly-giant/editable-options/signin-buttons.php:21
+#: plugin/themes/friendly-giant/editable-options/social-buttons.php:21
+#: plugin/themes/glasscase/editable-options/signin-buttons.php:21
+#: plugin/themes/glasscase/editable-options/social-buttons.php:21
+msgid "Cover Backgrounds"
+msgstr "Фон обложки"
+
+#: plugin/themes/darkforce/editable-options/signin-buttons.php:26
+#: plugin/themes/darkforce/editable-options/social-buttons.php:26
+#: plugin/themes/darkness/editable-options/signin-buttons.php:26
+#: plugin/themes/darkness/editable-options/social-buttons.php:26
+#: plugin/themes/download/editable-options/signin-buttons.php:26
+#: plugin/themes/download/editable-options/social-buttons.php:26
+#: plugin/themes/facebook/editable-options/signin-buttons.php:26
+#: plugin/themes/facebook/editable-options/social-buttons.php:26
+#: plugin/themes/friendly-giant/editable-options/signin-buttons.php:26
+#: plugin/themes/friendly-giant/editable-options/social-buttons.php:26
+#: plugin/themes/glasscase/editable-options/signin-buttons.php:26
+#: plugin/themes/glasscase/editable-options/social-buttons.php:26
+msgid "Twitter cover color"
+msgstr "Цвет обложки Twitter"
+
+#: plugin/themes/darkforce/editable-options/signin-buttons.php:32
+#: plugin/themes/darkforce/editable-options/social-buttons.php:32
+#: plugin/themes/darkness/editable-options/signin-buttons.php:32
+#: plugin/themes/darkness/editable-options/social-buttons.php:32
+#: plugin/themes/download/editable-options/signin-buttons.php:32
+#: plugin/themes/download/editable-options/social-buttons.php:32
+#: plugin/themes/facebook/editable-options/signin-buttons.php:32
+#: plugin/themes/facebook/editable-options/social-buttons.php:32
+#: plugin/themes/friendly-giant/editable-options/signin-buttons.php:32
+#: plugin/themes/friendly-giant/editable-options/social-buttons.php:32
+#: plugin/themes/glasscase/editable-options/signin-buttons.php:32
+#: plugin/themes/glasscase/editable-options/social-buttons.php:32
+msgid "Facebook cover color"
+msgstr "Цвет обложки Facebook"
+
+#: plugin/themes/darkforce/editable-options/signin-buttons.php:38
+#: plugin/themes/darkforce/editable-options/social-buttons.php:38
+#: plugin/themes/darkness/editable-options/signin-buttons.php:38
+#: plugin/themes/darkness/editable-options/social-buttons.php:38
+#: plugin/themes/download/editable-options/signin-buttons.php:38
+#: plugin/themes/download/editable-options/social-buttons.php:38
+#: plugin/themes/facebook/editable-options/signin-buttons.php:38
+#: plugin/themes/facebook/editable-options/social-buttons.php:38
+#: plugin/themes/friendly-giant/editable-options/signin-buttons.php:38
+#: plugin/themes/friendly-giant/editable-options/social-buttons.php:38
+#: plugin/themes/glasscase/editable-options/signin-buttons.php:38
+#: plugin/themes/glasscase/editable-options/social-buttons.php:38
+msgid "Google cover color"
+msgstr "Цвет обложки Google"
+
+#: plugin/themes/darkforce/editable-options/signin-buttons.php:44
+#: plugin/themes/darkforce/editable-options/social-buttons.php:44
+#: plugin/themes/darkness/editable-options/signin-buttons.php:44
+#: plugin/themes/darkness/editable-options/social-buttons.php:44
+#: plugin/themes/download/editable-options/signin-buttons.php:44
+#: plugin/themes/download/editable-options/social-buttons.php:44
+#: plugin/themes/facebook/editable-options/signin-buttons.php:44
+#: plugin/themes/facebook/editable-options/social-buttons.php:44
+#: plugin/themes/friendly-giant/editable-options/signin-buttons.php:44
+#: plugin/themes/friendly-giant/editable-options/social-buttons.php:44
+#: plugin/themes/glasscase/editable-options/signin-buttons.php:44
+#: plugin/themes/glasscase/editable-options/social-buttons.php:44
+msgid "LinkedIn cover color"
+msgstr "Цвет обложки LinkedIn"
+
+#: plugin/themes/darkforce/editable-options/signin-buttons.php:52
+#: plugin/themes/darkforce/editable-options/social-buttons.php:52
+#: plugin/themes/darkness/editable-options/signin-buttons.php:52
+#: plugin/themes/darkness/editable-options/social-buttons.php:52
+#: plugin/themes/download/editable-options/signin-buttons.php:52
+#: plugin/themes/download/editable-options/social-buttons.php:52
+#: plugin/themes/facebook/editable-options/signin-buttons.php:52
+#: plugin/themes/facebook/editable-options/social-buttons.php:52
+#: plugin/themes/friendly-giant/editable-options/signin-buttons.php:52
+#: plugin/themes/friendly-giant/editable-options/social-buttons.php:52
+#: plugin/themes/glasscase/editable-options/signin-buttons.php:52
+#: plugin/themes/glasscase/editable-options/social-buttons.php:52
+msgid "Cover Text"
+msgstr "Текст обложки"
+
+#: plugin/themes/darkforce/editable-options/signin-buttons.php:57
+#: plugin/themes/darkforce/editable-options/social-buttons.php:57
+#: plugin/themes/darkness/editable-options/signin-buttons.php:57
+#: plugin/themes/darkness/editable-options/social-buttons.php:57
+#: plugin/themes/download/editable-options/signin-buttons.php:57
+#: plugin/themes/download/editable-options/social-buttons.php:57
+#: plugin/themes/facebook/editable-options/signin-buttons.php:57
+#: plugin/themes/facebook/editable-options/social-buttons.php:57
+#: plugin/themes/friendly-giant/editable-options/signin-buttons.php:57
+#: plugin/themes/friendly-giant/editable-options/social-buttons.php:57
+#: plugin/themes/glasscase/editable-options/signin-buttons.php:57
+#: plugin/themes/glasscase/editable-options/social-buttons.php:57
+msgid "Font"
+msgstr "Шрифт"
+
+#: plugin/themes/darkforce/editable-options/social-buttons.php:10
+#: plugin/themes/darkness/editable-options/social-buttons.php:10
+#: plugin/themes/download/editable-options/social-buttons.php:10
+#: plugin/themes/facebook/editable-options/social-buttons.php:10
+#: plugin/themes/friendly-giant/editable-options/social-buttons.php:10
+#: plugin/themes/glasscase/editable-options/social-buttons.php:10
+msgid "Social Buttons"
+msgstr "Социальные кнопки"
+
+#: plugin/themes/darkforce/editable-options/step-to-step.php:10
+#: plugin/themes/darkness/editable-options/step-to-step.php:10
+#: plugin/themes/download/editable-options/step-to-step.php:10
+#: plugin/themes/facebook/editable-options/step-to-step.php:10
+#: plugin/themes/friendly-giant/editable-options/step-to-step.php:10
+#: plugin/themes/glasscase/editable-options/step-to-step.php:10
+msgid "Step to step"
+msgstr ""
+
+#: plugin/themes/darkforce/editable-options/step-to-step.php:20
+#: plugin/themes/darkness/editable-options/step-to-step.php:20
+#: plugin/themes/download/editable-options/step-to-step.php:20
+#: plugin/themes/facebook/editable-options/step-to-step.php:20
+#: plugin/themes/friendly-giant/editable-options/step-to-step.php:20
+#: plugin/themes/glasscase/editable-options/step-to-step.php:20
+msgid "Current screen"
+msgstr ""
+
+#: plugin/themes/darkforce/editable-options/step-to-step.php:25
+#: plugin/themes/darkforce/editable-options/step-to-step.php:56
+#: plugin/themes/darkness/editable-options/step-to-step.php:25
+#: plugin/themes/darkness/editable-options/step-to-step.php:56
+#: plugin/themes/download/editable-options/step-to-step.php:25
+#: plugin/themes/download/editable-options/step-to-step.php:62
+#: plugin/themes/facebook/editable-options/step-to-step.php:25
+#: plugin/themes/facebook/editable-options/step-to-step.php:56
+#: plugin/themes/friendly-giant/editable-options/step-to-step.php:25
+#: plugin/themes/friendly-giant/editable-options/step-to-step.php:56
+#: plugin/themes/glasscase/editable-options/step-to-step.php:25
+#: plugin/themes/glasscase/editable-options/step-to-step.php:56
+msgid "Mark background color"
+msgstr ""
+
+#: plugin/themes/darkforce/editable-options/step-to-step.php:31
+#: plugin/themes/darkforce/editable-options/step-to-step.php:62
+#: plugin/themes/darkness/editable-options/step-to-step.php:31
+#: plugin/themes/darkness/editable-options/step-to-step.php:62
+#: plugin/themes/download/editable-options/step-to-step.php:31
+#: plugin/themes/download/editable-options/step-to-step.php:68
+#: plugin/themes/facebook/editable-options/step-to-step.php:31
+#: plugin/themes/facebook/editable-options/step-to-step.php:62
+#: plugin/themes/friendly-giant/editable-options/step-to-step.php:31
+#: plugin/themes/friendly-giant/editable-options/step-to-step.php:62
+#: plugin/themes/glasscase/editable-options/step-to-step.php:31
+#: plugin/themes/glasscase/editable-options/step-to-step.php:62
+msgid "Mark text color"
+msgstr ""
+
+#: plugin/themes/darkforce/editable-options/step-to-step.php:37
+#: plugin/themes/darkforce/editable-options/step-to-step.php:68
+#: plugin/themes/darkness/editable-options/step-to-step.php:37
+#: plugin/themes/darkness/editable-options/step-to-step.php:68
+#: plugin/themes/download/editable-options/step-to-step.php:37
+#: plugin/themes/download/editable-options/step-to-step.php:74
+#: plugin/themes/facebook/editable-options/step-to-step.php:37
+#: plugin/themes/facebook/editable-options/step-to-step.php:68
+#: plugin/themes/friendly-giant/editable-options/step-to-step.php:37
+#: plugin/themes/friendly-giant/editable-options/step-to-step.php:68
+#: plugin/themes/glasscase/editable-options/step-to-step.php:37
+#: plugin/themes/glasscase/editable-options/step-to-step.php:68
+msgid "Step line background color"
+msgstr ""
+
+#: plugin/themes/darkforce/editable-options/step-to-step.php:43
+#: plugin/themes/darkforce/editable-options/step-to-step.php:74
+#: plugin/themes/darkness/editable-options/step-to-step.php:43
+#: plugin/themes/darkness/editable-options/step-to-step.php:74
+#: plugin/themes/download/editable-options/step-to-step.php:43
+#: plugin/themes/download/editable-options/step-to-step.php:80
+#: plugin/themes/facebook/editable-options/step-to-step.php:43
+#: plugin/themes/facebook/editable-options/step-to-step.php:74
+#: plugin/themes/friendly-giant/editable-options/step-to-step.php:43
+#: plugin/themes/friendly-giant/editable-options/step-to-step.php:74
+#: plugin/themes/glasscase/editable-options/step-to-step.php:43
+#: plugin/themes/glasscase/editable-options/step-to-step.php:74
+msgid "Step line text color"
+msgstr ""
+
+#: plugin/themes/darkforce/editable-options/step-to-step.php:51
+#: plugin/themes/darkness/editable-options/step-to-step.php:51
+#: plugin/themes/download/editable-options/step-to-step.php:57
+#: plugin/themes/facebook/editable-options/step-to-step.php:51
+#: plugin/themes/friendly-giant/editable-options/step-to-step.php:51
+#: plugin/themes/glasscase/editable-options/step-to-step.php:51
+msgid "Default screen"
+msgstr ""
+
+#: plugin/themes/darkness/editable-options/general.php:132
+#: plugin/themes/download/editable-options/general.php:138
+#: plugin/themes/glasscase/editable-options/general.php:132
+msgid "Border style:"
+msgstr ""
+
+#: plugin/themes/darkness/editable-options/general.php:134
+#: plugin/themes/download/editable-options/general.php:140
+#: plugin/themes/glasscase/editable-options/general.php:134
+msgid "Dashed"
+msgstr ""
+
+#: plugin/themes/darkness/editable-options/general.php:135
+#: plugin/themes/download/editable-options/general.php:141
+#: plugin/themes/glasscase/editable-options/general.php:135
+msgid "Solid"
+msgstr ""
+
+#: plugin/themes/darkness/editable-options/general.php:136
+#: plugin/themes/download/editable-options/general.php:142
+#: plugin/themes/glasscase/editable-options/general.php:136
+msgid "Dotted"
+msgstr ""
+
+#: plugin/themes/download/editable-options/general.php:119
+msgid "Left shadow color:"
+msgstr ""
+
+#: plugin/themes/download/editable-options/step-to-step.php:49
+msgid "Step line shadow color"
+msgstr ""
 
 #~ msgid "Sign-In Locker (default)"
 #~ msgstr "Замок авторизации (по умолчанию)"
@@ -521,9 +1168,6 @@ msgstr ""
 #~ msgid "Sing-In Locker"
 #~ msgstr "Замок авторизации"
 
-#~ msgid "Social Locker"
-#~ msgstr "Социальный замок"
-
 #~ msgid "Benefits"
 #~ msgstr "Выгода"
 
@@ -710,9 +1354,6 @@ msgstr ""
 
 #~ msgid "Please confirm your email address"
 #~ msgstr "Пожалуйста подтвердите ваш адрес электронной почты"
-
-#~ msgid "Text"
-#~ msgstr "Текст"
 
 #~ msgid ""
 #~ "Use the shortcode <strong>[link]</strong> to insert the confirmation link."
@@ -1807,15 +2448,6 @@ msgstr ""
 #~ "Узнайте, как использовать плагин <i class=\"fa fa-lightbulb-o\"></i>"
 
 #~ msgid ""
-#~ "Please, activate the plugin to get started. Enter a key\n"
-#~ "                                    you received with the plugin into the "
-#~ "form below."
-#~ msgstr ""
-#~ "Пожалуйста, активируйте плагин, чтобы приступить к работе. Введите ключ, "
-#~ "который вы получили, в поле ниже. Не знаете где ключ? <a href=\"#\" id="
-#~ "\"open-faq\">Нажмите здесь</a>."
-
-#~ msgid ""
 #~ "Public License is a GPLv2 compatible license.\n"
 #~ "                                    It allows you to change this version "
 #~ "of the plugin and to\n"
@@ -2802,9 +3434,6 @@ msgstr ""
 
 #~ msgid "no"
 #~ msgstr "нет"
-
-#~ msgid "Social Buttons"
-#~ msgstr "Социальные кнопки"
 
 #~ msgid "The \"Flat\" Theme (new!)"
 #~ msgstr "Тема  \"Flat\" (новая!)"
@@ -5540,50 +6169,17 @@ msgstr ""
 #~ "<div><strong>[Замок] замок [id=%d] не существует или замок по умолчанию "
 #~ "был удален.</strong></div>"
 
-#~ msgid "Color"
-#~ msgstr "Цвет"
-
-#~ msgid "Set up color and opacity:"
-#~ msgstr "Задайте цвет и прозрачность"
-
-#~ msgid "Gradient"
-#~ msgstr "Градиент"
-
 #~ msgid "Set up gradient"
 #~ msgstr "Настройте градиент"
 
-#~ msgid "Pattern"
-#~ msgstr "Изображение"
-
-#~ msgid "Set up pattern"
-#~ msgstr "Выберите фоновое изображение"
-
 #~ msgid "Locker Container"
 #~ msgstr "Контейнер"
-
-#~ msgid "Background"
-#~ msgstr "Фон"
-
-#~ msgid "Set up gradient:"
-#~ msgstr "Настройте градиент:"
-
-#~ msgid "Outer Border"
-#~ msgstr "Внешняя граница"
-
-#~ msgid "Set up color for outer border:"
-#~ msgstr "Задайте цвет внешней границы"
 
 #~ msgid "Set up gradient for outer border:"
 #~ msgstr "Градиент внешней границы"
 
 #~ msgid "Set up pattern for outer border:"
 #~ msgstr "Текстура внешней границы"
-
-#~ msgid "Outer border width"
-#~ msgstr "Ширина внешней границы"
-
-#~ msgid "Outer border radius"
-#~ msgstr "Радиус внешней границы"
 
 #~ msgid "Inner Border"
 #~ msgstr "Внутренняя граница"
@@ -5603,26 +6199,8 @@ msgstr ""
 #~ msgid "Inner border radius"
 #~ msgstr "Радиус внутренней границы:"
 
-#~ msgid "Header text"
-#~ msgstr "Текст заголовка"
-
-#~ msgid "Message text"
-#~ msgstr "Текст сообщения"
-
 #~ msgid "Header icons"
 #~ msgstr "Иконка заголовка"
-
-#~ msgid "Paddings"
-#~ msgstr "Отступы"
-
-#~ msgid "Box paddings"
-#~ msgstr "Внутренние отступы контейнера"
-
-#~ msgid "Margin after header"
-#~ msgstr "Отступ после заголовка"
-
-#~ msgid "Margin after message"
-#~ msgstr "Отступ после сообщения"
 
 #~ msgid "Locker Buttons"
 #~ msgstr "Кнопки"
@@ -5635,27 +6213,6 @@ msgstr ""
 
 #~ msgid "Border radius"
 #~ msgstr "Радиус границы"
-
-#~ msgid "Cover Backgrounds"
-#~ msgstr "Фон обложки"
-
-#~ msgid "Twitter cover color"
-#~ msgstr "Цвет обложки Twitter"
-
-#~ msgid "Facebook cover color"
-#~ msgstr "Цвет обложки Facebook"
-
-#~ msgid "Google cover color"
-#~ msgstr "Цвет обложки Google"
-
-#~ msgid "LinkedIn cover color"
-#~ msgstr "Цвет обложки LinkedIn"
-
-#~ msgid "Cover Text"
-#~ msgstr "Текст обложки"
-
-#~ msgid "Font"
-#~ msgstr "Шрифт"
 
 #~ msgid "VKontakte cover color"
 #~ msgstr "Цвет обложки Вконтакте"

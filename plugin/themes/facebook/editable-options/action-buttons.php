@@ -11,7 +11,7 @@
 	 */
 
 		array(
-			__('Actions Buttons', 'plugin-addon-popup-locker'),
+			__('Actions Buttons', 'bizpanda-popups-addon'),
 			'action-buttons',
 			array(
 				// accordion
@@ -22,18 +22,18 @@
 						// background options
 						array(
 							'type' => 'accordion-item',
-							'title' => __('Close window button', 'plugin-addon-popup-locker'),
+							'title' => __('Close window button', 'bizpanda-popups-addon'),
 							'items' => array(
 								array(
 									'type' => 'color-and-opacity',
 									'name' => 'action_close_button_bg_color',
-									'title' => __('Set up background color:', 'plugin-addon-popup-locker'),
+									'title' => __('Set up background color:', 'bizpanda-popups-addon'),
 									'default' => array('color' => '#ffeb31', 'opacity' => 100)
 								),
 								array(
 									'type' => 'color-and-opacity',
 									'name' => 'action_close_button_text_color',
-									'title' => __('Set up text color:', 'plugin-addon-popup-locker'),
+									'title' => __('Set up text color:', 'bizpanda-popups-addon'),
 									'default' => array('color' => '#846b0f', 'opacity' => 100)
 								),
 							)
@@ -41,18 +41,18 @@
 						// font options
 						array(
 							'type' => 'accordion-item',
-							'title' => __('Next screen button', 'plugin-addon-popup-locker'),
+							'title' => __('Next screen button', 'bizpanda-popups-addon'),
 							'items' => array(
 								array(
 									'type' => 'color-and-opacity',
 									'name' => 'action_next_button_bg_color',
-									'title' => __('Set up background color:', 'plugin-addon-popup-locker'),
+									'title' => __('Set up background color:', 'bizpanda-popups-addon'),
 									'default' => array('color' => '#CDDC39', 'opacity' => 100)
 								),
 								array(
 									'type' => 'color-and-opacity',
 									'name' => 'action_next_button_text_color',
-									'title' => __('Set up text color:', 'plugin-addon-popup-locker'),
+									'title' => __('Set up text color:', 'bizpanda-popups-addon'),
 									'default' => array('color' => '#687111', 'opacity' => 100)
 								),
 							)

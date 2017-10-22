@@ -1,0 +1,3 @@
+[submodule "libs/onepress/compiler"]
+	path = libs/onepress/compiler
+	url = ssh://git@bitbucket.org/OnePress/onp-compiler/
