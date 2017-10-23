@@ -3,9 +3,9 @@
 	 * Plugin Name:[Bizpanda Addon] Popup mode
 	 * Plugin URI: http://byoneress.com
 	 * Description: Adds the ability to create locks in a pop-up window. Has a set of functions and various scenarios for calling pop-up windows.
-	 * Author: Webcraftic <alex.kovalevv@gmail.com>
-	 * Version: 1.0.3
-	 * Author URI: http://byoneress.com
+	 * Author: Webcraftic <wordpress.webraftic@gmail.com>
+	 * Version: 1.0.0
+	 * Author URI: https://profiles.wordpress.org/webcraftic
 	 */
 
 	define('BZDA_POPUPS_ADN_INIT', true);
@@ -27,7 +27,7 @@
 	{
 		if( defined('OPTINPANDA_PLUGIN_ACTIVE') || defined('SOCIALLOCKER_PLUGIN_ACTIVE') ) {
 
-			global $bizpanda_popups_addon;
+			global $bizpanda, $bizpanda_popups_addon;
 
 			load_textdomain('bizpanda-popups-addon', BZDA_POPUPS_ADN_PLUGIN_DIR . '/langs/' . get_locale() . '.mo');
 
@@ -47,6 +47,7 @@
 
 			// requires factory modules extend global bizpanda
 			$bizpanda_popups_addon->load(array(
+				array('libs/factory/bootstrap', 'factory_bootstrap_000', 'admin'),
 				array('libs/onepress/api', 'onp_api_000'),
 				array('libs/onepress/licensing', 'onp_licensing_000'),
 				array('libs/onepress/updates', 'onp_updates_000')

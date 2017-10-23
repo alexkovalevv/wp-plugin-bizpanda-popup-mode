@@ -1,11 +1,11 @@
 (function($) {
-	tinymce.PluginManager.add('bizpanda_evolution_addon', function(editor, url) {
+	tinymce.PluginManager.add('bizpanda_popups_addon', function(editor, url) {
 		var menuCreated = false;
 
 		var menu = [];
 
-		editor.addButton('bizpanda_evolution_addon', {
-			title: bizpanda_evolution_shortcode_title,
+		editor.addButton('bizpanda_popups_addon', {
+			title: bizpanda_popups_addon_shortcode_title,
 			type: 'menubutton',
 			icon: 'icon onp-bzda-adn-events-shortcode-icon',
 			menu: menu,

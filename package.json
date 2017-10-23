@@ -2,13 +2,12 @@
   "assemblies": {
     "__global__": {
       "delete": [
-        "/libs/onepress/compiler",
+        "/libs/",
         "compiler.ini",
         "package.json",
         "node_modules",
         "Gruntfile.js",
-        "git-submodules.sh",
-        "/sr/"
+        "git-submodules.sh"
       ]
     },
     "build": {
@@ -16,7 +15,7 @@
   },
   "constants": {
     "var": "bizpanda-popups-addon",
-    "version": "4.5.5",
+    "version": "1.0.0",
     "api": "http://api.byonepress.com/1.1/",
     "name": [
       {

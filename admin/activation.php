@@ -25,6 +25,9 @@
 		public function activate()
 		{
 			$this->setupLicense();
+
+			// Redirect to help page
+			factory_000_set_lazy_redirect(opanda_get_admin_url('how-to-use', array('opanda_page' => 'bizpanda-popups-addon')));
 		}
 
 		/**
@@ -45,3 +48,4 @@
 	}
 
 	$bizpanda_popups_addon->registerActivation('BZDA_POPUPS_ADN_Activation');
+
