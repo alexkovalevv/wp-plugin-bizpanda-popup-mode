@@ -27,7 +27,7 @@
 			$this->setupLicense();
 
 			// Redirect to help page
-			factory_000_set_lazy_redirect(opanda_get_admin_url('how-to-use', array('opanda_page' => 'bizpanda-popups-addon')));
+			factory_000_set_lazy_redirect(opanda_get_admin_url('how-to-use', array('onp_sl_page' => 'bizpanda-popups-addon')));
 		}
 
 		/**

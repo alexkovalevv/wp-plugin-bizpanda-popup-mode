@@ -40,6 +40,11 @@
     width: 720px;
 }
 
+#OPanda_BasicOptionsMetaBox #opanda_style_animation,
+#OPanda_BasicOptionsMetaBox #opanda_buttons_style {
+    width: 155px;
+}
+
 /** Для темы Input Popup*/
 #OPanda_BasicOptionsMetaBox .factory-control-input_popup_text_link,
 #OPanda_AdvancedOptionsMetaBox .factory-control-input_popup_available_link {

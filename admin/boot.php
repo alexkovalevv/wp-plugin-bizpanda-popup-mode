@@ -114,6 +114,151 @@
 
 	add_filter('bizpanda_item_type_metaboxes', 'onp_bzda_popups_adn_metaboxes', 10, 1);
 
+	function onp_bzda_popups_adn_basic_options_style_section($items)
+	{
+		$items[] = array(
+			'type' => 'dropdown',
+			'name' => 'style_animation',
+			'data' => array(
+				array('none', 'None'),
+				array('bounce', 'bounce'),
+				array('flash', 'flash'),
+				array('pulse', 'pulse'),
+				array('rubberBand', 'rubberBand'),
+				array('shake', 'shake'),
+				array('swing', 'swing'),
+				array('tada', 'tada'),
+				array('wobble', 'wobble'),
+				array('jello', 'jello'),
+				array('bounceIn', 'bounceIn (default)'),
+				array('bounceInDown', 'bounceInDown'),
+				array('bounceInLeft', 'bounceInLeft'),
+				array('bounceInRight', 'bounceInRight'),
+				array('bounceInUp', 'bounceInUp'),
+				array('fadeIn', 'fadeIn'),
+				array('fadeInDown', 'fadeInDown'),
+				array('fadeInDownBig', 'fadeInDownBig'),
+				array('fadeInLeft', 'fadeInLeft'),
+				array('fadeInLeftBig', 'fadeInLeftBig'),
+				array('fadeInRight', 'fadeInRight'),
+				array('fadeInRightBig', 'fadeInRightBig'),
+				array('fadeInUp', 'fadeInUp'),
+				array('fadeInUpBig', 'fadeInUpBig'),
+				array('flip', 'flip'),
+				array('flipInX', 'flipInX'),
+				array('flipInY', 'flipInY'),
+				array('lightSpeedIn', 'lightSpeedIn'),
+				array('rotateIn', 'rotateIn'),
+				array('rotateInDownLeft', 'rotateInDownLeft'),
+				array('rotateInDownRight', 'rotateInDownRight'),
+				array('rotateInUpLeft', 'rotateInUpLeft'),
+				array('rotateInUpRight', 'rotateInUpRight'),
+				array('slideInUp', 'slideInUp'),
+				array('slideInDown', 'slideInDown'),
+				array('slideInLeft', 'slideInLeft'),
+				array('slideInRight', 'slideInRight'),
+				array('zoomIn', 'zoomIn'),
+				array('zoomInDown', 'zoomInDown'),
+				array('zoomInLeft', 'zoomInLeft'),
+				array('zoomInRight', 'zoomInRight'),
+				array('zoomInUp', 'zoomInUp'),
+				array('jackInTheBox', 'jackInTheBox'),
+				array('rollIn', 'rollIn')
+			),
+			'title' => __('Theme animation', 'bizpanda'),
+			'hint' => __('Choose the way how your locker should lock the content.', 'bizpanda-popups-addon'),
+			'default' => 'bounceIn'
+		);
+
+		$type = OPanda_Items::getCurrentItem();
+
+		if( !empty($type) && $type['name'] == 'signin-locker' ) {
+			$items[] = array(
+				'type' => 'dropdown',
+				'name' => 'buttons_style',
+				'data' => array(
+					array('dark-force', 'Dark Force'),
+					array('great-attractor', 'Great Attractor'),
+					//array('web20', 'Web  2.0')
+				),
+				'title' => __('Buttons style', 'bizpanda'),
+				'hint' => __('Choose the way how your locker should lock the content.', 'bizpanda-popups-addon'),
+				'default' => 'great-attractor'
+			);
+		}
+
+		return $items;
+	}
+
+	add_filter('bizpanda_basic_options_style_section', 'onp_bzda_popups_adn_basic_options_style_section', 10, 1);
+
+	/**
+	 * Add new control after overlay option
+	 * @param $items
+	 * @return array
+	 */
+	function onp_bzda_popups_adn_basic_options($items)
+	{
+		$items[] = array(
+			'type' => 'dropdown-and-colors',
+			'hasHints' => true,
+			'name' => 'overlay_style',
+			'dropdown' => array(
+				'data' => array(
+					array('none', 'None'),
+					array('locks', __('Locks', 'bizpanda-popups-addon')),
+					array('discounts', __('Discounts', 'bizpanda-popups-addon'))
+				),
+				'default' => 'none',
+			),
+			'colors' => array(
+				'data' => array(
+					array('default', '#9e9e9e'),
+					array('color_1', '#fff'),
+					array('color_2', '#607d8b'),
+					array('color_3', '#795548'),
+					array('color_4', '#f44336'),
+					array('color_5', '#ff5722'),
+					array('color_6', '#ff9800'),
+					array('color_7', '#ffeb3b'),
+					array('color_8', '#cddc39'),
+					array('color_9', '#8bc34a'),
+					array('color_10', '#4caf50'),
+					array('color_11', '#009688'),
+					array('color_12', '#9c27b0'),
+					array('color_13', '#673ab7'),
+				),
+				'default' => 'default',
+			),
+			'title' => __('Textures', 'plugin-paylocker'),
+			'hint' => __('Select the most suitable theme.', 'bizpanda-popups-addon'),
+
+		);
+
+		return $items;
+	}
+
+	add_filter('bizpanda_basic_options', 'onp_bzda_popups_adn_basic_options', 10, 1);
+
+	/**
+	 * Assets scripts for dropdonw and color control
+	 * @param Factory000_AssetsList $scripts
+	 * @param Factory000_AssetsList $styles
+	 */
+	function onp_bzda_popups_adn_edit_item_assets($scripts, $styles)
+	{
+		$scripts->request(array(
+			'control.dropdown-and-colors'
+		), 'bootstrap');
+
+		$styles->request(array(
+			'control.radio-colors',
+			'control.dropdown-and-colors'
+		), 'bootstrap');
+	}
+
+	add_filter('bizpanda_panda-item_edit_assets', 'onp_bzda_popups_adn_edit_item_assets', 10, 2);
+
 	/**
 	 * Assets scripts of the addon for preview
 	 */

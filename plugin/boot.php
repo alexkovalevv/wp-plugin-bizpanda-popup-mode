@@ -92,6 +92,21 @@
 		$options['open_locker_way'] = opanda_get_item_option($lockerId, 'open_locker_way');
 		$options['open_locker_selector'] = opanda_get_item_option($lockerId, 'open_locker_selector');
 
+		if( isset($options['theme']) ) {
+			if( is_string($options['theme']) ) {
+				$themeName = $options['theme'];
+
+				$options['theme'] = array();
+				$options['theme']['name'] = $themeName;
+			}
+		} else {
+			$options['theme'] = array();
+		}
+
+		if( is_array($options['theme']) ) {
+			$options['theme']['animation']['type'] = opanda_get_item_option($lockerId, 'style_animation');
+		}
+
 		return $options;
 	}
 
