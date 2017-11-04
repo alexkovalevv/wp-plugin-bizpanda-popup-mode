@@ -45,7 +45,7 @@
 						if( !menu.length ) {
 							menu.push({
 								value: 0,
-								text: bizpanda_evolution_not_found_text
+								text: bizpanda_popups_addon_not_found_text
 							});
 						}
 

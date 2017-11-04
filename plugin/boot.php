@@ -105,6 +105,8 @@
 
 		if( is_array($options['theme']) ) {
 			$options['theme']['animation']['type'] = opanda_get_item_option($lockerId, 'style_animation');
+			$options['theme']['overlay']['style'] = opanda_get_item_option($lockerId, 'overlay_style__dropdown');
+			$options['theme']['overlay']['color'] = opanda_get_item_option($lockerId, 'overlay_style__colors');
 		}
 
 		return $options;

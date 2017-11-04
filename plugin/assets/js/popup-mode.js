@@ -1,5 +1,5 @@
 /*!
- * Popup mode addon - v1.0.4, 2017-10-25 
+ * Popup mode addon - v1.0.4, 2017-11-04 
  * for Social Locker platform: Russian site: https://sociallocker.ru,
  * English sites: https://sociallocker.org, http://byonepress.com 
  * 
@@ -467,6 +467,81 @@
 				var connectControl = locker.locker.find('.onp-sl-connect-buttons').find('.onp-sl-control');
 
 				connectControl.addClass('hvr-' + theme.connectButtons.hoverAnimation);
+			}
+			if( locker.overlap && theme.overlay ) {
+				var overlapBackgroundElement = locker.overlapBox.find('.onp-sl-overlap-background');
+
+				if( theme.overlay.style ) {
+
+					if( theme.overlay.style == 'none' ) {
+						overlapBackgroundElement.css({
+							background: 'none;'
+						});
+					}
+
+					if( typeof theme.overlay.style === 'string' && [
+							'lockers',
+							'discounts'
+						].indexOf(theme.overlay.style) > -1 ) {
+						overlapBackgroundElement.addClass('onp-sl-' + theme.overlay.style + '-texture');
+					}
+
+					//var background = 'none';
+
+					/*overlapBackgroundElement.css({
+					 backgroundImage: background
+					 });*/
+				}
+
+				if( theme.overlay.color && theme.overlay.color != 'default' ) {
+					var color = 'rgba(97, 97, 97, 0.78)';
+
+					switch( theme.overlay.color ) {
+						case "color_1":
+							color = 'rgba(255, 255, 255, 0.78)';
+							break;
+						case "color_2":
+							color = 'rgba(96, 125, 139, 0.78)';
+							break;
+						case "color_3":
+							color = 'rgba(121, 85, 72, 0.78)';
+							break;
+						case "color_4":
+							color = 'rgba(244, 67, 54, 0.78)';
+							break;
+						case "color_5":
+							color = 'rgba(255, 87, 34, 0.78)';
+							break;
+						case "color_6":
+							color = 'rgba(255, 152, 0, 0.78)';
+							break;
+						case "color_7":
+							color = 'rgba(255, 235, 59, 0.78)';
+							break;
+						case "color_8":
+							color = 'rgba(205, 220, 57, 0.78)';
+							break;
+						case "color_9":
+							color = 'rgba(139, 195, 74, 0.78)';
+							break;
+						case "color_10":
+							color = 'rgba(76, 175, 80, 0.78)';
+							break;
+						case "color_11":
+							color = 'rgba(0, 150, 136, 0.78)';
+							break;
+						case "color_12":
+							color = 'rgba(156, 39, 176, 0.78)';
+							break;
+						case "color_13":
+							color = 'rgba(103, 58, 183, 0.78)';
+							break;
+					}
+
+					overlapBackgroundElement.css({
+						backgroundColor: color
+					});
+				}
 			}
 
 		}

@@ -29,6 +29,14 @@
 
 			global $bizpanda, $bizpanda_popups_addon;
 
+			//todo: We eliminate compatibility problems with plugins that have an old factory.
+			$sl_bizpanda_ver_old = defined('SOCIALLOCKER_BIZPANDA_VERSION') && SOCIALLOCKER_BIZPANDA_VERSION < 126;
+			$op_bizpanda_ver_old = defined('OPTINPANDA_BIZPANDA_VERSION') && OPTINPANDA_BIZPANDA_VERSION < 126;
+
+			if( $sl_bizpanda_ver_old || $op_bizpanda_ver_old ) {
+				return;
+			}
+
 			load_textdomain('bizpanda-popups-addon', BZDA_POPUPS_ADN_PLUGIN_DIR . '/langs/' . get_locale() . '.mo');
 
 			require_once BZDA_POPUPS_ADN_PLUGIN_DIR . '/admin/classes/plugin.class.php';
@@ -74,6 +82,15 @@
 	function onp_bzda_popups_adn_activation()
 	{
 		if( defined('OPTINPANDA_PLUGIN_ACTIVE') || defined('SOCIALLOCKER_PLUGIN_ACTIVE') ) {
+
+			//todo: We eliminate compatibility problems with plugins that have an old factory.
+			$sl_bizpanda_ver_old = defined('SOCIALLOCKER_BIZPANDA_VERSION') && SOCIALLOCKER_BIZPANDA_VERSION < 126;
+			$op_bizpanda_ver_old = defined('OPTINPANDA_BIZPANDA_VERSION') && OPTINPANDA_BIZPANDA_VERSION < 126;
+
+			if( $sl_bizpanda_ver_old || $op_bizpanda_ver_old ) {
+				return;
+			}
+
 			onp_bzda_popups_adn_init();
 
 			global $bizpanda_popups_addon;
