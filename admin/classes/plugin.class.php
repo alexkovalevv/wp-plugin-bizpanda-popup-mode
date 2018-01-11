@@ -44,7 +44,10 @@
 			/*if( onp_build('premium') ) {
 				return true;
 			}*/
+
 			#endcomp
+
+			return true;
 
 			$component_name = str_rot13($this->component);
 

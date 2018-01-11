@@ -11,6 +11,16 @@
       ]
     },
     "build": {
+      "premium": {
+        "delete": [
+        ]
+      }
+    },
+    "lang": {
+      "en_US": {
+        "delete": [
+        ]
+      }
     }
   },
   "constants": {
