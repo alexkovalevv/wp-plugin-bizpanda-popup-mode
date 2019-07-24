@@ -3,9 +3,8 @@
 	 * Plugin Name:[Bizpanda Addon] Popup mode
 	 * Plugin URI: http://byoneress.com
 	 * Description: Adds the ability to create locks in a pop-up window. Has a set of functions and various scenarios for calling pop-up windows.
-	 * Author: Webcraftic <wordpress.webraftic@gmail.com>
+	 * Author: Alex Kovalev <alex.kovalevv@gmail.com>
 	 * Version: 1.0.0
-	 * Author URI: https://profiles.wordpress.org/webcraftic
 	 */
 
 	define('BZDA_POPUPS_ADN_INIT', true);
